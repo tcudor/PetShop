@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.side_panel = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_view_clienti = new System.Windows.Forms.Button();
+            this.button_exit = new System.Windows.Forms.Button();
+            this.button_view_angajati = new System.Windows.Forms.Button();
+            this.button_view_animale = new System.Windows.Forms.Button();
+            this.button_home = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.side_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -43,102 +43,112 @@
             // 
             this.side_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.side_panel.AutoSize = true;
             this.side_panel.BackColor = System.Drawing.Color.RosyBrown;
-            this.side_panel.Controls.Add(this.button5);
-            this.side_panel.Controls.Add(this.button4);
-            this.side_panel.Controls.Add(this.button3);
-            this.side_panel.Controls.Add(this.button2);
-            this.side_panel.Controls.Add(this.button1);
+            this.side_panel.Controls.Add(this.button_view_clienti);
+            this.side_panel.Controls.Add(this.button_exit);
+            this.side_panel.Controls.Add(this.button_view_angajati);
+            this.side_panel.Controls.Add(this.button_view_animale);
+            this.side_panel.Controls.Add(this.button_home);
             this.side_panel.Location = new System.Drawing.Point(0, 0);
+            this.side_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.side_panel.Name = "side_panel";
-            this.side_panel.Size = new System.Drawing.Size(119, 453);
+            this.side_panel.Size = new System.Drawing.Size(115, 608);
             this.side_panel.TabIndex = 1;
             // 
-            // button5
+            // button_view_clienti
             // 
-            this.button5.Location = new System.Drawing.Point(0, 268);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(118, 53);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Vizualizare Clienti";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button_view_clienti.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_view_clienti.Location = new System.Drawing.Point(0, 195);
+            this.button_view_clienti.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_view_clienti.Name = "button_view_clienti";
+            this.button_view_clienti.Size = new System.Drawing.Size(104, 40);
+            this.button_view_clienti.TabIndex = 4;
+            this.button_view_clienti.Text = "Vizualizare Clienti";
+            this.button_view_clienti.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // button_exit
             // 
-            this.button4.Location = new System.Drawing.Point(0, 328);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 53);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Iesire";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_exit.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_exit.Location = new System.Drawing.Point(0, 235);
+            this.button_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_exit.Name = "button_exit";
+            this.button_exit.Size = new System.Drawing.Size(104, 40);
+            this.button_exit.TabIndex = 3;
+            this.button_exit.Text = "Iesire";
+            this.button_exit.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // button_view_angajati
             // 
-            this.button3.Location = new System.Drawing.Point(0, 208);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 53);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Vizualizare Angajati";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_view_angajati.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_view_angajati.Location = new System.Drawing.Point(0, 155);
+            this.button_view_angajati.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_view_angajati.Name = "button_view_angajati";
+            this.button_view_angajati.Size = new System.Drawing.Size(104, 40);
+            this.button_view_angajati.TabIndex = 2;
+            this.button_view_angajati.Text = "Vizualizare Angajati";
+            this.button_view_angajati.UseVisualStyleBackColor = false;
+            this.button_view_angajati.Click += new System.EventHandler(this.button_view_angajati_Click);
             // 
-            // button2
+            // button_view_animale
             // 
-            this.button2.Location = new System.Drawing.Point(0, 148);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 53);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Vizualizare Animale";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_view_animale.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_view_animale.Location = new System.Drawing.Point(0, 115);
+            this.button_view_animale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_view_animale.Name = "button_view_animale";
+            this.button_view_animale.Size = new System.Drawing.Size(104, 40);
+            this.button_view_animale.TabIndex = 1;
+            this.button_view_animale.Text = "Vizualizare Animale";
+            this.button_view_animale.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // button_home
             // 
-            this.button1.Location = new System.Drawing.Point(0, 91);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Acasa";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_home.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_home.Location = new System.Drawing.Point(0, 76);
+            this.button_home.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_home.Name = "button_home";
+            this.button_home.Size = new System.Drawing.Size(104, 39);
+            this.button_home.TabIndex = 0;
+            this.button_home.Text = "Acasa";
+            this.button_home.UseVisualStyleBackColor = false;
+            this.button_home.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::PetShop.Properties.Resources.fundal;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(115, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(683, 453);
+            this.pictureBox1.Size = new System.Drawing.Size(977, 608);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.ClientSize = new System.Drawing.Size(1087, 606);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.side_panel);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "PetShop";
             this.side_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Panel side_panel;
-        private Button button1;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button5;
+        private Button button_home;
+        private Button button_exit;
+        private Button button_view_angajati;
+        private Button button_view_animale;
+        private Button button_view_clienti;
         private PictureBox pictureBox1;
     }
 }

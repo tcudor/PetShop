@@ -13,24 +13,24 @@ namespace PetShop
             dbContext = new DBContext();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button_view_angajati_Click (object sender, EventArgs e)
         {
-            FunctionariForm fromular = new FunctionariForm() { };
-            fromular.Show();
+            FunctionariForm form = new FunctionariForm() { };
+            form.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
         
-            var functionar = dbContext.Functionars.FirstOrDefault(x => x.IdFunctionar == 1);
-            var functionar = new Functionar()
-            {
-                FirstName = wfaffa.Text,
+            //var functionar = dbContext.Functionars.FirstOrDefault(x => x.IdFunctionar == 1);
+            //var functionar = new Functionar()
+            //{
+            //    FirstName = wfaffa.Text,
 
-            }
-            dbContext.Functionars.Add(functionar);
-            dbContext.Functionars.Remove(functionar);
-            dbContext.SaveChanges();
+            //}
+            //dbContext.Functionars.Add(functionar);
+            //dbContext.Functionars.Remove(functionar);
+            //dbContext.SaveChanges();
             //MessageBox.Show(functionar.Phone);
         }
     }

@@ -28,17 +28,18 @@ namespace PetShop.Forms
         public void GetAll()
         {
             BindingSource BS= new BindingSource();
-            var query = dbcontext.Functionars.Select(x => new
-            {
-                x.IdFunctionar,
-                x.FirstName,
-                x.LastName,
-                x.Email,
-                x.Adresa,
-                x.Sex,
-                x.BirthDate,
-                x.DataAngajarii
-            }).ToList();
+            var query = dbcontext.Functionars.ToList();
+            //var query = dbcontext.Functionars.Select(x => new
+            //{
+            //    x.IdFunctionar,
+            //    x.FirstName,
+            //    x.LastName,
+            //    x.Email,
+            //    x.Adresa,
+            //    x.Sex,
+            //    x.BirthDate,
+            //    x.DataAngajarii
+            //}).ToList();
             BS.DataSource = query;
             dataGridView1.DataSource=BS;
             dataGridView1.Refresh();
