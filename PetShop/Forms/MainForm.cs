@@ -13,25 +13,29 @@ namespace PetShop
             dbContext = new DBContext();
         }
 
-        private void button_view_angajati_Click (object sender, EventArgs e)
+        private void button_view_angajati_Click(object sender, EventArgs e)
         {
-            FunctionariForm form = new FunctionariForm() { };
+            AngajatiForm form = new AngajatiForm() { };
             form.Show();
+            this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-        
-            //var functionar = dbContext.Functionars.FirstOrDefault(x => x.IdFunctionar == 1);
-            //var functionar = new Functionar()
-            //{
-            //    FirstName = wfaffa.Text,
+       
 
-            //}
-            //dbContext.Functionars.Add(functionar);
-            //dbContext.Functionars.Remove(functionar);
-            //dbContext.SaveChanges();
-            //MessageBox.Show(functionar.Phone);
-        }
+
+
+        //var Angajat = dbContext.Angajats.FirstOrDefault(x => x.IdAngajat == 1);
+        //var Angajat = new Angajat()
+        //{
+        //    FirstName = wfaffa.Text,
+
+        //}
+        //dbContext.Angajats.Add(Angajat);
+        //dbContext.Angajats.Remove(Angajat);
+        //dbContext.SaveChanges();
+        //MessageBox.Show(Angajat.Phone);
+
+
+
     }
 }

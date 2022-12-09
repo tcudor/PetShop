@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace PetShop.Models
 {
-    public class Functionar
+    public class Angajat
     {
         [Key]
-        public int IdFunctionar { get; set; }
+        public int IdAngajat { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

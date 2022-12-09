@@ -10,16 +10,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PetShop.Forms.Angajati;
 
 namespace PetShop.Forms
 {
-    public partial class FunctionariForm : Form
+    public partial class AngajatiForm : Form
     {
-        private readonly DBContext dbcontext;
-        public FunctionariForm()
+        private readonly DBContext dbContext;
+        public AngajatiForm()
         {
             InitializeComponent();
-            dbcontext = new DBContext();
+            dbContext = new DBContext();
             GetAll();
 
             
@@ -28,10 +29,10 @@ namespace PetShop.Forms
         public void GetAll()
         {
             BindingSource BS= new BindingSource();
-            var query = dbcontext.Functionars.ToList();
-            //var query = dbcontext.Functionars.Select(x => new
+            var query = dbContext.Angajati.ToList();
+            //var query = dbcontext.Angajats.Select(x => new
             //{
-            //    x.IdFunctionar,
+            //    x.IdAngajat,
             //    x.FirstName,
             //    x.LastName,
             //    x.Email,
@@ -45,6 +46,19 @@ namespace PetShop.Forms
             dataGridView1.Refresh();
 
         }
-       
+
+        private void button_home_Click(object sender, EventArgs e)
+        {
+            MainForm form = new MainForm() { };
+            form.Show();
+            this.Close();
+        }
+
+        private void button_adauga_Click(object sender, EventArgs e)
+        {
+            Adaugare form = new Adaugare() { };
+            form.Show();
+            
+        }
     }
 }

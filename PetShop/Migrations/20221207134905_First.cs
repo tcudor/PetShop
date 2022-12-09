@@ -12,7 +12,7 @@ namespace PetShop.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Animals",
+                name: "Animale",
                 columns: table => new
                 {
                     IdAnimal = table.Column<int>(type: "int", nullable: false)
@@ -24,11 +24,11 @@ namespace PetShop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Animals", x => x.IdAnimal);
+                    table.PrimaryKey("PK_Animale", x => x.IdAnimal);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Clients",
+                name: "Clienti",
                 columns: table => new
                 {
                     IdClient = table.Column<int>(type: "int", nullable: false)
@@ -43,14 +43,14 @@ namespace PetShop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clients", x => x.IdClient);
+                    table.PrimaryKey("PK_Clienti", x => x.IdClient);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Functionars",
+                name: "Angajati",
                 columns: table => new
                 {
-                    IdFunctionar = table.Column<int>(type: "int", nullable: false)
+                    IdAngajat = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -63,7 +63,7 @@ namespace PetShop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Functionars", x => x.IdFunctionar);
+                    table.PrimaryKey("PK_Angajats", x => x.IdAngajat);
                 });
         }
 
@@ -71,13 +71,13 @@ namespace PetShop.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Animals");
+                name: "Animale");
 
             migrationBuilder.DropTable(
-                name: "Clients");
+                name: "Clienti");
 
             migrationBuilder.DropTable(
-                name: "Functionars");
+                name: "Angajats");
         }
     }
 }

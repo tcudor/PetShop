@@ -46,7 +46,7 @@ namespace PetShop.Migrations
 
                     b.HasKey("IdAnimal");
 
-                    b.ToTable("Animals");
+                    b.ToTable("Animale");
                 });
 
             modelBuilder.Entity("PetShop.Models.Client", b =>
@@ -86,16 +86,16 @@ namespace PetShop.Migrations
 
                     b.HasKey("IdClient");
 
-                    b.ToTable("Clients");
+                    b.ToTable("Clienti");
                 });
 
-            modelBuilder.Entity("PetShop.Models.Functionar", b =>
+            modelBuilder.Entity("PetShop.Models.Angajat", b =>
                 {
-                    b.Property<int>("IdFunctionar")
+                    b.Property<int>("IdAngajat")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdFunctionar"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdAngajat"));
 
                     b.Property<string>("Adresa")
                         .IsRequired()
@@ -127,9 +127,9 @@ namespace PetShop.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IdFunctionar");
+                    b.HasKey("IdAngajat");
 
-                    b.ToTable("Functionars");
+                    b.ToTable("Angajats");
                 });
 #pragma warning restore 612, 618
         }

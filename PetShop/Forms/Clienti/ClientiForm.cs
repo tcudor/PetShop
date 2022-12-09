@@ -28,10 +28,10 @@ namespace PetShop.Forms
         public void GetAll()
         {
             BindingSource BS= new BindingSource();
-            var query = dbcontext.Clients.ToList();
-            //var query = dbcontext.Functionars.Select(x => new
+            var query = dbcontext.Clienti.ToList();
+            //var query = dbcontext.Angajats.Select(x => new
             //{
-            //    x.IdFunctionar,
+            //    x.IdAngajat,
             //    x.FirstName,
             //    x.LastName,
             //    x.Email,

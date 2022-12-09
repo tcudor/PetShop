@@ -1,6 +1,6 @@
 ﻿namespace PetShop.Forms
 {
-    partial class FunctionariForm
+    partial class AngajatiForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,9 +34,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_home = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button_adauga = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -47,10 +47,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(112, 307);
+            this.dataGridView1.Location = new System.Drawing.Point(128, 409);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(977, 299);
+            this.dataGridView1.Size = new System.Drawing.Size(1117, 399);
             this.dataGridView1.TabIndex = 1;
             // 
             // side_panel
@@ -63,20 +65,18 @@
             this.side_panel.Controls.Add(this.button4);
             this.side_panel.Controls.Add(this.button3);
             this.side_panel.Controls.Add(this.button2);
-            this.side_panel.Controls.Add(this.button1);
-            this.side_panel.Location = new System.Drawing.Point(2, -2);
-            this.side_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.side_panel.Controls.Add(this.button_home);
+            this.side_panel.Location = new System.Drawing.Point(2, -3);
             this.side_panel.Name = "side_panel";
-            this.side_panel.Size = new System.Drawing.Size(115, 608);
+            this.side_panel.Size = new System.Drawing.Size(131, 811);
             this.side_panel.TabIndex = 2;
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.RosyBrown;
-            this.button5.Location = new System.Drawing.Point(0, 195);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(0, 260);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(104, 40);
+            this.button5.Size = new System.Drawing.Size(119, 53);
             this.button5.TabIndex = 4;
             this.button5.Text = "Vizualizare Clienti";
             this.button5.UseVisualStyleBackColor = false;
@@ -84,10 +84,9 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.RosyBrown;
-            this.button4.Location = new System.Drawing.Point(0, 235);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(0, 313);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 40);
+            this.button4.Size = new System.Drawing.Size(119, 53);
             this.button4.TabIndex = 3;
             this.button4.Text = "Iesire";
             this.button4.UseVisualStyleBackColor = false;
@@ -95,10 +94,9 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Location = new System.Drawing.Point(0, 155);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(0, 207);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 40);
+            this.button3.Size = new System.Drawing.Size(119, 53);
             this.button3.TabIndex = 2;
             this.button3.Text = "Vizualizare Angajati";
             this.button3.UseVisualStyleBackColor = false;
@@ -106,75 +104,80 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Location = new System.Drawing.Point(0, 115);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(0, 153);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 40);
+            this.button2.Size = new System.Drawing.Size(119, 53);
             this.button2.TabIndex = 1;
             this.button2.Text = "Vizualizare Animale";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // button_home
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Location = new System.Drawing.Point(0, 76);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Acasa";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_home.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_home.Location = new System.Drawing.Point(0, 101);
+            this.button_home.Name = "button_home";
+            this.button_home.Size = new System.Drawing.Size(119, 52);
+            this.button_home.TabIndex = 0;
+            this.button_home.Text = "Acasa";
+            this.button_home.UseVisualStyleBackColor = false;
+            this.button_home.Click += new System.EventHandler(this.button_home_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PetShop.Properties.Resources.fundal;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(112, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(128, -3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(977, 608);
+            this.pictureBox1.Size = new System.Drawing.Size(1117, 815);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // button6
+            // button_adauga
             // 
-            this.button6.Location = new System.Drawing.Point(696, 96);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(91, 57);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Adaugare Angajat";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button_adauga.Location = new System.Drawing.Point(795, 128);
+            this.button_adauga.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_adauga.Name = "button_adauga";
+            this.button_adauga.Size = new System.Drawing.Size(104, 76);
+            this.button_adauga.TabIndex = 4;
+            this.button_adauga.Text = "Adaugare Angajat";
+            this.button_adauga.UseVisualStyleBackColor = true;
+            this.button_adauga.Click += new System.EventHandler(this.button_adauga_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(793, 96);
+            this.button7.Location = new System.Drawing.Point(906, 128);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(91, 57);
+            this.button7.Size = new System.Drawing.Size(104, 76);
             this.button7.TabIndex = 5;
             this.button7.Text = "Modificare Angajat";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(890, 96);
+            this.button8.Location = new System.Drawing.Point(1017, 128);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(91, 57);
+            this.button8.Size = new System.Drawing.Size(104, 76);
             this.button8.TabIndex = 6;
             this.button8.Text = "Stergere Angajat";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // FunctionariForm
+            // AngajatiForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 606);
+            this.ClientSize = new System.Drawing.Size(1242, 808);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button_adauga);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.side_panel);
-            this.Name = "FunctionariForm";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "AngajatiForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.side_panel.ResumeLayout(false);
@@ -185,15 +188,15 @@
         }
 
         #endregion
-        private DataGridView dataGridView1;
+        public DataGridView dataGridView1;
         private Panel side_panel;
         private Button button5;
         private Button button4;
         private Button button3;
         private Button button2;
-        private Button button1;
+        private Button button_home;
         private PictureBox pictureBox1;
-        private Button button6;
+        private Button button_adauga;
         private Button button7;
         private Button button8;
     }
