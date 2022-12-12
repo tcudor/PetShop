@@ -64,6 +64,7 @@
             this.button_view_clienti.TabIndex = 4;
             this.button_view_clienti.Text = "Vizualizare Clienti";
             this.button_view_clienti.UseVisualStyleBackColor = false;
+            this.button_view_clienti.Click += new System.EventHandler(this.button_view_clienti_Click);
             // 
             // button_exit
             // 
@@ -96,6 +97,7 @@
             this.button_view_animale.TabIndex = 1;
             this.button_view_animale.Text = "Vizualizare Animale";
             this.button_view_animale.UseVisualStyleBackColor = false;
+            this.button_view_animale.Click += new System.EventHandler(this.button_view_animale_Click);
             // 
             // button_home
             // 
@@ -117,7 +119,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(126, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1117, 811);
+            this.pictureBox1.Size = new System.Drawing.Size(1117, 815);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;

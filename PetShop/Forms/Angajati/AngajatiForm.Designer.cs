@@ -30,15 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idAngajatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAngajariiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.angajatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.side_panel = new System.Windows.Forms.Panel();
             this.button_view_clienti = new System.Windows.Forms.Button();
@@ -61,20 +52,8 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idAngajatDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.adresaDataGridViewTextBoxColumn,
-            this.phoneDataGridViewTextBoxColumn,
-            this.sexDataGridViewTextBoxColumn,
-            this.birthDateDataGridViewTextBoxColumn,
-            this.dataAngajariiDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.angajatBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(128, 447);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
@@ -82,69 +61,6 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(1117, 361);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // idAngajatDataGridViewTextBoxColumn
-            // 
-            this.idAngajatDataGridViewTextBoxColumn.DataPropertyName = "IdAngajat";
-            this.idAngajatDataGridViewTextBoxColumn.HeaderText = "IdAngajat";
-            this.idAngajatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idAngajatDataGridViewTextBoxColumn.Name = "idAngajatDataGridViewTextBoxColumn";
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // adresaDataGridViewTextBoxColumn
-            // 
-            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "Adresa";
-            this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
-            this.adresaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
-            this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            // 
-            // sexDataGridViewTextBoxColumn
-            // 
-            this.sexDataGridViewTextBoxColumn.DataPropertyName = "Sex";
-            this.sexDataGridViewTextBoxColumn.HeaderText = "Sex";
-            this.sexDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sexDataGridViewTextBoxColumn.Name = "sexDataGridViewTextBoxColumn";
-            // 
-            // birthDateDataGridViewTextBoxColumn
-            // 
-            this.birthDateDataGridViewTextBoxColumn.DataPropertyName = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn.HeaderText = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.birthDateDataGridViewTextBoxColumn.Name = "birthDateDataGridViewTextBoxColumn";
-            // 
-            // dataAngajariiDataGridViewTextBoxColumn
-            // 
-            this.dataAngajariiDataGridViewTextBoxColumn.DataPropertyName = "DataAngajarii";
-            this.dataAngajariiDataGridViewTextBoxColumn.HeaderText = "DataAngajarii";
-            this.dataAngajariiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dataAngajariiDataGridViewTextBoxColumn.Name = "dataAngajariiDataGridViewTextBoxColumn";
             // 
             // angajatBindingSource
             // 
@@ -185,6 +101,7 @@
             this.button_exit.TabIndex = 3;
             this.button_exit.Text = "Iesire";
             this.button_exit.UseVisualStyleBackColor = false;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
             // 
             // button_view_angajati
             // 
@@ -305,14 +222,5 @@
         private Button button_modifica;
         private Button button_stergere;
         private BindingSource angajatBindingSource;
-        private DataGridViewTextBoxColumn idAngajatDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn dataAngajariiDataGridViewTextBoxColumn;
     }
 }

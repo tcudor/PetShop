@@ -1,5 +1,6 @@
 using PetShop.Data;
 using PetShop.Forms;
+using PetShop.Forms.Clienti;
 using PetShop.Models;
 using System.Windows.Forms.VisualStyles;
 
@@ -25,6 +26,18 @@ namespace PetShop
         private void button_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button_view_clienti_Click(object sender, EventArgs e)
+        {
+            ClientiForm form = new ClientiForm();
+            form.Show();
+            this.Close();
+        }
+
+        private void button_view_animale_Click(object sender, EventArgs e)
+        {
+
         }
 
 

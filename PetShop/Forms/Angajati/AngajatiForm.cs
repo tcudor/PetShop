@@ -74,5 +74,10 @@ namespace PetShop.Forms
             this.Close();
 
         }
+
+        private void button_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
