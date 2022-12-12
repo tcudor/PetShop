@@ -26,7 +26,7 @@ namespace PetShop.Forms.Angajati
             
         }
 
-        public AngajatiForm AngajatiForm { get; }
+       
 
         private void button_modifica_Click(object sender, EventArgs e)
         {
