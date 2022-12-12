@@ -26,7 +26,7 @@ namespace PetShop.Forms.Angajati
 
         private void button_adauga_Click(object sender, EventArgs e)
         {
-            var elem = new Angajat()
+            var Angajat = new Angajat()
             {
                 FirstName = textBox_nume.Text,
                 LastName = textBox_prenume.Text,
@@ -37,11 +37,9 @@ namespace PetShop.Forms.Angajati
                 DataAngajarii = dateTimePicker_dataA.Value,
                 BirthDate=dateTimePicker_dataN.Value
             };
-            dbContext.Angajati.Add(elem);
+            dbContext.Angajati.Add(Angajat);
             dbContext.SaveChanges();
-            AngajatiForm form = new AngajatiForm() { };
-            form.dataGridView1.Refresh();
-
+            this.Close();
         }
     }
 }

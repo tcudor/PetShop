@@ -74,6 +74,7 @@
             this.button_exit.TabIndex = 3;
             this.button_exit.Text = "Iesire";
             this.button_exit.UseVisualStyleBackColor = false;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
             // 
             // button_view_angajati
             // 
@@ -129,7 +130,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.side_panel);
             this.Name = "MainForm";
-            this.Text = "PetShop";          
+            this.Text = "PetShop";
             this.side_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

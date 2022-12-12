@@ -28,32 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idAngajatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAngajariiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angajatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.side_panel = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_view_clienti = new System.Windows.Forms.Button();
+            this.button_exit = new System.Windows.Forms.Button();
+            this.button_view_angajati = new System.Windows.Forms.Button();
+            this.button_view_animale = new System.Windows.Forms.Button();
             this.button_home = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_adauga = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.button_modifica = new System.Windows.Forms.Button();
+            this.button_stergere = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angajatBindingSource)).BeginInit();
             this.side_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(128, 409);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAngajatDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.adresaDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn,
+            this.sexDataGridViewTextBoxColumn,
+            this.birthDateDataGridViewTextBoxColumn,
+            this.dataAngajariiDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.angajatBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(128, 447);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1117, 399);
+            this.dataGridView1.Size = new System.Drawing.Size(1117, 361);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // idAngajatDataGridViewTextBoxColumn
+            // 
+            this.idAngajatDataGridViewTextBoxColumn.DataPropertyName = "IdAngajat";
+            this.idAngajatDataGridViewTextBoxColumn.HeaderText = "IdAngajat";
+            this.idAngajatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idAngajatDataGridViewTextBoxColumn.Name = "idAngajatDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // adresaDataGridViewTextBoxColumn
+            // 
+            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "Adresa";
+            this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
+            this.adresaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            // 
+            // sexDataGridViewTextBoxColumn
+            // 
+            this.sexDataGridViewTextBoxColumn.DataPropertyName = "Sex";
+            this.sexDataGridViewTextBoxColumn.HeaderText = "Sex";
+            this.sexDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sexDataGridViewTextBoxColumn.Name = "sexDataGridViewTextBoxColumn";
+            // 
+            // birthDateDataGridViewTextBoxColumn
+            // 
+            this.birthDateDataGridViewTextBoxColumn.DataPropertyName = "BirthDate";
+            this.birthDateDataGridViewTextBoxColumn.HeaderText = "BirthDate";
+            this.birthDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.birthDateDataGridViewTextBoxColumn.Name = "birthDateDataGridViewTextBoxColumn";
+            // 
+            // dataAngajariiDataGridViewTextBoxColumn
+            // 
+            this.dataAngajariiDataGridViewTextBoxColumn.DataPropertyName = "DataAngajarii";
+            this.dataAngajariiDataGridViewTextBoxColumn.HeaderText = "DataAngajarii";
+            this.dataAngajariiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataAngajariiDataGridViewTextBoxColumn.Name = "dataAngajariiDataGridViewTextBoxColumn";
+            // 
+            // angajatBindingSource
+            // 
+            this.angajatBindingSource.DataSource = typeof(PetShop.Models.Angajat);
             // 
             // side_panel
             // 
@@ -61,55 +156,56 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.side_panel.AutoSize = true;
             this.side_panel.BackColor = System.Drawing.Color.RosyBrown;
-            this.side_panel.Controls.Add(this.button5);
-            this.side_panel.Controls.Add(this.button4);
-            this.side_panel.Controls.Add(this.button3);
-            this.side_panel.Controls.Add(this.button2);
+            this.side_panel.Controls.Add(this.button_view_clienti);
+            this.side_panel.Controls.Add(this.button_exit);
+            this.side_panel.Controls.Add(this.button_view_angajati);
+            this.side_panel.Controls.Add(this.button_view_animale);
             this.side_panel.Controls.Add(this.button_home);
             this.side_panel.Location = new System.Drawing.Point(2, -3);
             this.side_panel.Name = "side_panel";
             this.side_panel.Size = new System.Drawing.Size(131, 811);
             this.side_panel.TabIndex = 2;
             // 
-            // button5
+            // button_view_clienti
             // 
-            this.button5.BackColor = System.Drawing.Color.RosyBrown;
-            this.button5.Location = new System.Drawing.Point(0, 260);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 53);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Vizualizare Clienti";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button_view_clienti.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_view_clienti.Location = new System.Drawing.Point(0, 260);
+            this.button_view_clienti.Name = "button_view_clienti";
+            this.button_view_clienti.Size = new System.Drawing.Size(119, 53);
+            this.button_view_clienti.TabIndex = 4;
+            this.button_view_clienti.Text = "Vizualizare Clienti";
+            this.button_view_clienti.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // button_exit
             // 
-            this.button4.BackColor = System.Drawing.Color.RosyBrown;
-            this.button4.Location = new System.Drawing.Point(0, 313);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 53);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Iesire";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button_exit.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_exit.Location = new System.Drawing.Point(0, 313);
+            this.button_exit.Name = "button_exit";
+            this.button_exit.Size = new System.Drawing.Size(119, 53);
+            this.button_exit.TabIndex = 3;
+            this.button_exit.Text = "Iesire";
+            this.button_exit.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // button_view_angajati
             // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Location = new System.Drawing.Point(0, 207);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 53);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Vizualizare Angajati";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_view_angajati.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_view_angajati.Location = new System.Drawing.Point(0, 207);
+            this.button_view_angajati.Name = "button_view_angajati";
+            this.button_view_angajati.Size = new System.Drawing.Size(119, 53);
+            this.button_view_angajati.TabIndex = 2;
+            this.button_view_angajati.Text = "Vizualizare Angajati";
+            this.button_view_angajati.UseVisualStyleBackColor = false;
+            this.button_view_angajati.Click += new System.EventHandler(this.button_view_angajati_Click);
             // 
-            // button2
+            // button_view_animale
             // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Location = new System.Drawing.Point(0, 153);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 53);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Vizualizare Animale";
-            this.button2.UseVisualStyleBackColor = false;
+            this.button_view_animale.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_view_animale.Location = new System.Drawing.Point(0, 153);
+            this.button_view_animale.Name = "button_view_animale";
+            this.button_view_animale.Size = new System.Drawing.Size(119, 53);
+            this.button_view_animale.TabIndex = 1;
+            this.button_view_animale.Text = "Vizualizare Animale";
+            this.button_view_animale.UseVisualStyleBackColor = false;
             // 
             // button_home
             // 
@@ -124,6 +220,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::PetShop.Properties.Resources.fundal;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(128, -3);
@@ -136,6 +235,7 @@
             // 
             // button_adauga
             // 
+            this.button_adauga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_adauga.Location = new System.Drawing.Point(795, 128);
             this.button_adauga.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button_adauga.Name = "button_adauga";
@@ -145,33 +245,37 @@
             this.button_adauga.UseVisualStyleBackColor = true;
             this.button_adauga.Click += new System.EventHandler(this.button_adauga_Click);
             // 
-            // button7
+            // button_modifica
             // 
-            this.button7.Location = new System.Drawing.Point(906, 128);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(104, 76);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Modificare Angajat";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button_modifica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_modifica.Location = new System.Drawing.Point(906, 128);
+            this.button_modifica.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_modifica.Name = "button_modifica";
+            this.button_modifica.Size = new System.Drawing.Size(104, 76);
+            this.button_modifica.TabIndex = 5;
+            this.button_modifica.Text = "Modificare Angajat";
+            this.button_modifica.UseVisualStyleBackColor = true;
+            this.button_modifica.Click += new System.EventHandler(this.button_modifica_Click);
             // 
-            // button8
+            // button_stergere
             // 
-            this.button8.Location = new System.Drawing.Point(1017, 128);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(104, 76);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Stergere Angajat";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button_stergere.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_stergere.Location = new System.Drawing.Point(1017, 128);
+            this.button_stergere.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_stergere.Name = "button_stergere";
+            this.button_stergere.Size = new System.Drawing.Size(104, 76);
+            this.button_stergere.TabIndex = 6;
+            this.button_stergere.Text = "Stergere Angajat";
+            this.button_stergere.UseVisualStyleBackColor = true;
+            this.button_stergere.Click += new System.EventHandler(this.button_stergere_Click);
             // 
             // AngajatiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1242, 808);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button_stergere);
+            this.Controls.Add(this.button_modifica);
             this.Controls.Add(this.button_adauga);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
@@ -180,6 +284,7 @@
             this.Name = "AngajatiForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angajatBindingSource)).EndInit();
             this.side_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -190,14 +295,24 @@
         #endregion
         public DataGridView dataGridView1;
         private Panel side_panel;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button button_view_clienti;
+        private Button button_exit;
+        private Button button_view_angajati;
+        private Button button_view_animale;
         private Button button_home;
         private PictureBox pictureBox1;
         private Button button_adauga;
-        private Button button7;
-        private Button button8;
+        private Button button_modifica;
+        private Button button_stergere;
+        private BindingSource angajatBindingSource;
+        private DataGridViewTextBoxColumn idAngajatDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dataAngajariiDataGridViewTextBoxColumn;
     }
 }

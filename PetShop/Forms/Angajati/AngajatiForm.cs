@@ -30,17 +30,6 @@ namespace PetShop.Forms
         {
             BindingSource BS= new BindingSource();
             var query = dbContext.Angajati.ToList();
-            //var query = dbcontext.Angajats.Select(x => new
-            //{
-            //    x.IdAngajat,
-            //    x.FirstName,
-            //    x.LastName,
-            //    x.Email,
-            //    x.Adresa,
-            //    x.Sex,
-            //    x.BirthDate,
-            //    x.DataAngajarii
-            //}).ToList();
             BS.DataSource = query;
             dataGridView1.DataSource=BS;
             dataGridView1.Refresh();
@@ -59,6 +48,31 @@ namespace PetShop.Forms
             Adaugare form = new Adaugare() { };
             form.Show();
             
+        }
+
+        private void button_modifica_Click(object sender, EventArgs e)
+        {
+            Modificare form = new Modificare() { };
+            form.Show();
+        }
+
+        private void button_refresh_Click(object sender, EventArgs e)
+        {
+           GetAll();
+        }
+
+        private void button_stergere_Click(object sender, EventArgs e)
+        {
+            Stergere form = new Stergere() { };
+            form.Show();
+        }
+
+        private void button_view_angajati_Click(object sender, EventArgs e)
+        {
+            AngajatiForm form = new AngajatiForm() { };
+            form.Show();
+            this.Close();
+
         }
     }
 }

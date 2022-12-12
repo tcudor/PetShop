@@ -1,6 +1,7 @@
 using PetShop.Data;
 using PetShop.Forms;
 using PetShop.Models;
+using System.Windows.Forms.VisualStyles;
 
 namespace PetShop
 {
@@ -18,9 +19,15 @@ namespace PetShop
             AngajatiForm form = new AngajatiForm() { };
             form.Show();
             this.Close();
+            
         }
 
-       
+        private void button_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
 
 
 

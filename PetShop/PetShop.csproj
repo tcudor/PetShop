@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
@@ -18,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Forms\Angajati\Modificare.cs" />
     <Compile Update="Forms\ClientiForm.cs">
       <SubType>Form</SubType>
     </Compile>
