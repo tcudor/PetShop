@@ -34,7 +34,7 @@ namespace PetShop.Forms.Angajati
             int id = (int)numericUpDown_id.Value;
             var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);   
             
-            Angajat.FirstName = Angajat.FirstName;
+            Angajat.FirstName = textBox_nume.Text;
             Angajat.LastName = textBox_prenume.Text;
             Angajat.Phone = textBox_telefon.Text;
             Angajat.Email = textBox_email.Text;

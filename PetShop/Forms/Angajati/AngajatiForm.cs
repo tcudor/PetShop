@@ -17,6 +17,7 @@ namespace PetShop.Forms
     public partial class AngajatiForm : Form
     {
         private readonly DBContext dbContext;
+        
         public AngajatiForm()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace PetShop.Forms
 
         public void GetAll()
         {
+           
             BindingSource BS= new BindingSource();
             var query = dbContext.Angajati.ToList();
             BS.DataSource = query;
@@ -78,6 +80,11 @@ namespace PetShop.Forms
         private void button_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button_refresh_Click_1(object sender, EventArgs e)
+        {
+            GetAll();
         }
     }
 }
