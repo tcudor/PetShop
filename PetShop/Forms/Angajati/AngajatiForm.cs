@@ -11,6 +11,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PetShop.Forms.Angajati;
+using PetShop.Forms.Clienti;
+using Stergere = PetShop.Forms.Angajati.Stergere;
+using Adaugare = PetShop.Forms.Angajati.Adaugare;
+using Modificare = PetShop.Forms.Angajati.Modificare;
 
 namespace PetShop.Forms
 {
@@ -58,11 +62,6 @@ namespace PetShop.Forms
             form.Show();
         }
 
-        private void button_refresh_Click(object sender, EventArgs e)
-        {
-           GetAll();
-        }
-
         private void button_stergere_Click(object sender, EventArgs e)
         {
             Stergere form = new Stergere() { };
@@ -84,7 +83,16 @@ namespace PetShop.Forms
 
         private void button_refresh_Click_1(object sender, EventArgs e)
         {
-            GetAll();
+            AngajatiForm form = new AngajatiForm() { };
+            form.Show();
+            this.Close();
+        }
+
+        private void button_view_clienti_Click(object sender, EventArgs e)
+        {
+            ClientiForm form = new ClientiForm() { };
+            form.Show();
+            this.Close();
         }
     }
 }

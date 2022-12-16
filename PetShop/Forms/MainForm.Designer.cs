@@ -44,7 +44,7 @@
             this.side_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.side_panel.AutoSize = true;
-            this.side_panel.BackColor = System.Drawing.Color.RosyBrown;
+            this.side_panel.BackColor = System.Drawing.Color.MidnightBlue;
             this.side_panel.Controls.Add(this.button_view_clienti);
             this.side_panel.Controls.Add(this.button_exit);
             this.side_panel.Controls.Add(this.button_view_angajati);
@@ -57,7 +57,10 @@
             // 
             // button_view_clienti
             // 
-            this.button_view_clienti.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_view_clienti.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_view_clienti.FlatAppearance.BorderSize = 0;
+            this.button_view_clienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_view_clienti.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_view_clienti.Location = new System.Drawing.Point(0, 260);
             this.button_view_clienti.Name = "button_view_clienti";
             this.button_view_clienti.Size = new System.Drawing.Size(119, 53);
@@ -68,7 +71,10 @@
             // 
             // button_exit
             // 
-            this.button_exit.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_exit.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_exit.FlatAppearance.BorderSize = 0;
+            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_exit.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_exit.Location = new System.Drawing.Point(0, 313);
             this.button_exit.Name = "button_exit";
             this.button_exit.Size = new System.Drawing.Size(119, 53);
@@ -79,7 +85,10 @@
             // 
             // button_view_angajati
             // 
-            this.button_view_angajati.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_view_angajati.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_view_angajati.FlatAppearance.BorderSize = 0;
+            this.button_view_angajati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_view_angajati.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_view_angajati.Location = new System.Drawing.Point(0, 207);
             this.button_view_angajati.Name = "button_view_angajati";
             this.button_view_angajati.Size = new System.Drawing.Size(119, 53);
@@ -90,7 +99,10 @@
             // 
             // button_view_animale
             // 
-            this.button_view_animale.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_view_animale.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_view_animale.FlatAppearance.BorderSize = 0;
+            this.button_view_animale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_view_animale.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_view_animale.Location = new System.Drawing.Point(0, 153);
             this.button_view_animale.Name = "button_view_animale";
             this.button_view_animale.Size = new System.Drawing.Size(119, 53);
@@ -101,7 +113,10 @@
             // 
             // button_home
             // 
-            this.button_home.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_home.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_home.FlatAppearance.BorderSize = 0;
+            this.button_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_home.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_home.Location = new System.Drawing.Point(0, 101);
             this.button_home.Name = "button_home";
             this.button_home.Size = new System.Drawing.Size(119, 52);

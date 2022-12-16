@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using PetShop.Data;
 using PetShop.Models;
 using System;
@@ -53,6 +54,7 @@ namespace PetShop.Forms.Angajati
         private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
+            int copie=id;
             var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
             if (Angajat != null)
             {                          
@@ -64,11 +66,14 @@ namespace PetShop.Forms.Angajati
                     textBox_sex.Text = Angajat.Sex;
                     dateTimePicker_dataA.Value = Angajat.DataAngajarii;
                     dateTimePicker_dataN.Value = Angajat.BirthDate;
+                    copie = id;
             }
             else
             {
-                    MessageBox.Show("Ati introdus un id inexistent");
+                MessageBox.Show("Ati introdus un id inexistent");
+                numericUpDown_id.Value = copie;
             }
+          
         }
 
 

@@ -82,5 +82,12 @@ namespace PetShop.Forms.Clienti
             form.Show();
             this.Close();
         }
+
+        private void button_refresh_Click_1(object sender, EventArgs e)
+        {
+            ClientiForm form = new ClientiForm() { };
+            form.Show();
+            this.Close();
+        }
     }
 }
