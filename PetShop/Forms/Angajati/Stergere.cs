@@ -1,4 +1,5 @@
 ﻿using PetShop.Data;
+using PetShop.Forms.Clienti;
 using PetShop.Models;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,8 @@ namespace PetShop.Forms.Angajati
             {
                 dbContext.Angajati.Remove(Angajat);
                 dbContext.SaveChanges();
+                ClientiForm form = new ClientiForm() { };
+                form.Show();
                 this.Close();
             }
             else

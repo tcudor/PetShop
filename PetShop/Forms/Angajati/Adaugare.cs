@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PetShop.Data;
+using PetShop.Forms.Clienti;
 using PetShop.Models;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,8 @@ namespace PetShop.Forms.Angajati
             };
             dbContext.Angajati.Add(Angajat);
             dbContext.SaveChanges();
+            ClientiForm form = new ClientiForm() { };
+            form.Show();
             this.Close();
         }
     }

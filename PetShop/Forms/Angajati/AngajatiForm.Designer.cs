@@ -46,24 +46,27 @@
             this.button_view_angajati = new System.Windows.Forms.Button();
             this.button_view_animale = new System.Windows.Forms.Button();
             this.button_home = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_adauga = new System.Windows.Forms.Button();
             this.button_modifica = new System.Windows.Forms.Button();
             this.button_stergere = new System.Windows.Forms.Button();
             this.button_refresh = new System.Windows.Forms.Button();
+            this.panel_up = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.angajatBindingSource)).BeginInit();
             this.side_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel_up.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idAngajatDataGridViewTextBoxColumn,
@@ -78,13 +81,13 @@
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.No;
             this.dataGridView1.DataSource = this.angajatBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.Lime;
-            this.dataGridView1.Location = new System.Drawing.Point(128, 447);
+            this.dataGridView1.Location = new System.Drawing.Point(128, 94);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1117, 361);
+            this.dataGridView1.Size = new System.Drawing.Size(1117, 714);
             this.dataGridView1.TabIndex = 1;
             // 
             // idAngajatDataGridViewTextBoxColumn
@@ -248,28 +251,18 @@
             this.button_home.UseVisualStyleBackColor = false;
             this.button_home.Click += new System.EventHandler(this.button_home_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::PetShop.Properties.Resources.fundal;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(128, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1117, 815);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // button_adauga
             // 
-            this.button_adauga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_adauga.Location = new System.Drawing.Point(795, 128);
+            this.button_adauga.AutoSize = true;
+            this.button_adauga.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_adauga.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_adauga.FlatAppearance.BorderSize = 0;
+            this.button_adauga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_adauga.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_adauga.Location = new System.Drawing.Point(844, 0);
             this.button_adauga.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button_adauga.Name = "button_adauga";
-            this.button_adauga.Size = new System.Drawing.Size(104, 76);
+            this.button_adauga.Size = new System.Drawing.Size(193, 95);
             this.button_adauga.TabIndex = 4;
             this.button_adauga.Text = "Adaugare Angajat";
             this.button_adauga.UseVisualStyleBackColor = true;
@@ -277,11 +270,16 @@
             // 
             // button_modifica
             // 
-            this.button_modifica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_modifica.Location = new System.Drawing.Point(906, 128);
+            this.button_modifica.AutoSize = true;
+            this.button_modifica.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_modifica.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_modifica.FlatAppearance.BorderSize = 0;
+            this.button_modifica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_modifica.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_modifica.Location = new System.Drawing.Point(1037, 0);
             this.button_modifica.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button_modifica.Name = "button_modifica";
-            this.button_modifica.Size = new System.Drawing.Size(104, 76);
+            this.button_modifica.Size = new System.Drawing.Size(205, 95);
             this.button_modifica.TabIndex = 5;
             this.button_modifica.Text = "Modificare Angajat";
             this.button_modifica.UseVisualStyleBackColor = true;
@@ -289,11 +287,16 @@
             // 
             // button_stergere
             // 
-            this.button_stergere.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_stergere.Location = new System.Drawing.Point(1017, 128);
+            this.button_stergere.AutoSize = true;
+            this.button_stergere.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_stergere.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_stergere.FlatAppearance.BorderSize = 0;
+            this.button_stergere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_stergere.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_stergere.Location = new System.Drawing.Point(662, 0);
             this.button_stergere.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button_stergere.Name = "button_stergere";
-            this.button_stergere.Size = new System.Drawing.Size(104, 76);
+            this.button_stergere.Size = new System.Drawing.Size(182, 95);
             this.button_stergere.TabIndex = 6;
             this.button_stergere.Text = "Stergere Angajat";
             this.button_stergere.UseVisualStyleBackColor = true;
@@ -301,34 +304,49 @@
             // 
             // button_refresh
             // 
-            this.button_refresh.Location = new System.Drawing.Point(128, 414);
+            this.button_refresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_refresh.FlatAppearance.BorderSize = 0;
+            this.button_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_refresh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_refresh.Location = new System.Drawing.Point(128, 4);
             this.button_refresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button_refresh.Name = "button_refresh";
-            this.button_refresh.Size = new System.Drawing.Size(86, 34);
+            this.button_refresh.Size = new System.Drawing.Size(182, 87);
             this.button_refresh.TabIndex = 7;
             this.button_refresh.Text = "Refresh";
             this.button_refresh.UseVisualStyleBackColor = true;
             this.button_refresh.Click += new System.EventHandler(this.button_refresh_Click_1);
+            // 
+            // panel_up
+            // 
+            this.panel_up.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel_up.Controls.Add(this.button_refresh);
+            this.panel_up.Controls.Add(this.button_stergere);
+            this.panel_up.Controls.Add(this.button_adauga);
+            this.panel_up.Controls.Add(this.button_modifica);
+            this.panel_up.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_up.Location = new System.Drawing.Point(0, 0);
+            this.panel_up.Name = "panel_up";
+            this.panel_up.Size = new System.Drawing.Size(1242, 95);
+            this.panel_up.TabIndex = 15;
             // 
             // AngajatiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1242, 808);
-            this.Controls.Add(this.button_refresh);
-            this.Controls.Add(this.button_stergere);
-            this.Controls.Add(this.button_modifica);
-            this.Controls.Add(this.button_adauga);
+            this.Controls.Add(this.panel_up);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.side_panel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AngajatiForm";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.angajatBindingSource)).EndInit();
             this.side_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel_up.ResumeLayout(false);
+            this.panel_up.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,7 +360,6 @@
         private Button button_view_angajati;
         private Button button_view_animale;
         private Button button_home;
-        private PictureBox pictureBox1;
         private Button button_adauga;
         private Button button_modifica;
         private Button button_stergere;
@@ -357,5 +374,6 @@
         private DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dataAngajariiDataGridViewTextBoxColumn;
+        private Panel panel_up;
     }
 }
