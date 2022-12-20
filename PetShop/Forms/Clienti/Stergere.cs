@@ -23,14 +23,23 @@ namespace PetShop.Forms.Clienti
         private void button_stergere_Click(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
-            var Client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
-            if (Client != null)
+            try
             {
-                dbContext.Clienti.Remove(Client);
-                dbContext.SaveChanges();
-                this.Close();
+                var Client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
+                if (Client != null)
+                {
+                    dbContext.Clienti.Remove(Client);
+                    dbContext.SaveChanges();
+                    ClientiForm form = new ClientiForm() { };
+                    form.Show();
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception();
+                }
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Ati introdus un id inexistent");
             }

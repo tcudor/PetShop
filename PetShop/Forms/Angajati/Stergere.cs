@@ -26,20 +26,27 @@ namespace PetShop.Forms.Angajati
         private void button_stergere_Click(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
-            var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
-            if (Angajat != null)
+            try
             {
-                dbContext.Angajati.Remove(Angajat);
-                dbContext.SaveChanges();
-                ClientiForm form = new ClientiForm() { };
-                form.Show();
-                this.Close();
+                var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
+                if (Angajat != null)
+                {
+                    dbContext.Angajati.Remove(Angajat);
+                    dbContext.SaveChanges();
+                    AngajatiForm form = new AngajatiForm() { };
+                    form.Show();
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception();
+                }
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Ati introdus un id inexistent");
             }
-        }        
+        }
     }
 }
 

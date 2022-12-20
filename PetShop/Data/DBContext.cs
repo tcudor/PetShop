@@ -20,7 +20,7 @@ namespace PetShop.Data
             }
         }
 
-        public DbSet<Animal> Animali { get; set; }
+        public DbSet<Animal> Animale { get; set; }
         public DbSet<Client> Clienti { get; set; }
         public DbSet<Angajat> Angajati { get; set; }
     }

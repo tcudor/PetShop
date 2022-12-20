@@ -206,6 +206,7 @@
             this.button_view_animale.TabIndex = 1;
             this.button_view_animale.Text = "Vizualizare Animale";
             this.button_view_animale.UseVisualStyleBackColor = false;
+            this.button_view_animale.Click += new System.EventHandler(this.button_view_animale_Click);
             // 
             // button_home
             // 
@@ -269,9 +270,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::PetShop.Properties.Resources.download;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(129, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 

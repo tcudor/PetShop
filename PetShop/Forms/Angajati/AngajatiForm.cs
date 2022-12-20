@@ -21,23 +21,23 @@ namespace PetShop.Forms
     public partial class AngajatiForm : Form
     {
         private readonly DBContext dbContext;
-        
+
         public AngajatiForm()
         {
             InitializeComponent();
             dbContext = new DBContext();
             GetAll();
 
-            
+
         }
 
         public void GetAll()
         {
-           
-            BindingSource BS= new BindingSource();
+
+            BindingSource BS = new BindingSource();
             var query = dbContext.Angajati.ToList();
             BS.DataSource = query;
-            dataGridView1.DataSource=BS;
+            dataGridView1.DataSource = BS;
             dataGridView1.Refresh();
 
         }
@@ -53,7 +53,7 @@ namespace PetShop.Forms
         {
             Adaugare form = new Adaugare() { };
             form.Show();
-            
+
         }
 
         private void button_modifica_Click(object sender, EventArgs e)
@@ -64,8 +64,9 @@ namespace PetShop.Forms
 
         private void button_stergere_Click(object sender, EventArgs e)
         {
-            Stergere form = new Stergere() { };
+            AngajatiForm form = new AngajatiForm() { };
             form.Show();
+            this.Close();
         }
 
         private void button_view_angajati_Click(object sender, EventArgs e)
@@ -93,6 +94,99 @@ namespace PetShop.Forms
             ClientiForm form = new ClientiForm() { };
             form.Show();
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BindingSource BS = new BindingSource();
+            if (comboBox1.Text == "IdAngajat")
+            {
+                var query = dbContext.Angajati.OrderBy(x => x.IdAngajat).ToList();
+                BS.DataSource = query;
+                dataGridView1.DataSource = BS;
+                dataGridView1.Refresh();
+            }
+            if (comboBox1.Text == "Nume")
+            {
+                var query = dbContext.Angajati.OrderBy(x => x.FirstName).ToList();
+                BS.DataSource = query;
+                dataGridView1.DataSource = BS;
+                dataGridView1.Refresh();
+            }
+            if (comboBox1.Text == "Prenume")
+            {
+                var query = dbContext.Angajati.OrderBy(x => x.LastName).ToList();
+                BS.DataSource = query;
+                dataGridView1.DataSource = BS;
+                dataGridView1.Refresh();
+            }
+            if (comboBox1.Text == "Email")
+            {
+                var query = dbContext.Angajati.OrderBy(x => x.Email).ToList();
+                BS.DataSource = query;
+                dataGridView1.DataSource = BS;
+                dataGridView1.Refresh();
+            }
+            if (comboBox1.Text == "Telefon")
+            {
+                var query = dbContext.Angajati.OrderBy(x => x.Phone).ToList();
+                BS.DataSource = query;
+                dataGridView1.DataSource = BS;
+                dataGridView1.Refresh();
+            }
+            if (comboBox1.Text == "Adresa")
+            {
+                var query = dbContext.Angajati.OrderBy(x => x.Adresa).ToList();
+                BS.DataSource = query;
+                dataGridView1.DataSource = BS;
+                dataGridView1.Refresh();
+            }
+            if (comboBox1.Text == "Data nastere")
+            {
+                var query = dbContext.Angajati.OrderBy(x => x.BirthDate).ToList();
+                BS.DataSource = query;
+                dataGridView1.DataSource = BS;
+                dataGridView1.Refresh();
+            }
+            if (comboBox1.Text == "Data angajare")
+            {
+                var query = dbContext.Angajati.OrderBy(x => x.DataAngajarii).ToList();
+                BS.DataSource = query;
+                dataGridView1.DataSource = BS;
+                dataGridView1.Refresh();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BindingSource BS = new BindingSource();
+            int id = (int)numericUpDown_id.Value;
+            var query = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
+            BS.DataSource = query;
+            dataGridView1.DataSource = BS;
+            dataGridView1.Refresh();
+        }
+
+        private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
+        {
+            int id = (int)numericUpDown_id.Value;
+            int copie = id;
+            try
+            {
+                var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
+                if (Angajat != null)
+                {
+                    copie = id;
+                }
+                else
+                {
+                    throw new Exception() ;
+                }
+            }
+            catch (Exception) 
+            { 
+                MessageBox.Show("Ati introdus un id inexistent");
+            }
         }
     }
 }

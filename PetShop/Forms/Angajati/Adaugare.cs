@@ -40,7 +40,7 @@ namespace PetShop.Forms.Angajati
             };
             dbContext.Angajati.Add(Angajat);
             dbContext.SaveChanges();
-            ClientiForm form = new ClientiForm() { };
+            AngajatiForm form = new AngajatiForm() { };
             form.Show();
             this.Close();
         }

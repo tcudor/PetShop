@@ -1,5 +1,6 @@
 using PetShop.Data;
 using PetShop.Forms;
+using PetShop.Forms.Animale;
 using PetShop.Forms.Clienti;
 using PetShop.Models;
 using System.Windows.Forms.VisualStyles;
@@ -37,7 +38,9 @@ namespace PetShop
 
         private void button_view_animale_Click(object sender, EventArgs e)
         {
-
+            AnimaleForm form = new AnimaleForm();
+            form.Show();
+            this.Close();
         }
 
 

@@ -42,21 +42,31 @@ namespace PetShop.Forms.Clienti
         private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
+            int copie = id;
             var Client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
-            if (Client != null)
+            try
             {
-                textBox_nume.Text = Client.FirstName;
-                textBox_prenume.Text = Client.LastName;
-                textBox_adresa.Text = Client.Adresa;
-                textBox_telefon.Text = Client.Phone;
-                textBox_email.Text = Client.Email;
-                textBox_sex.Text = Client.Sex;
-                dateTimePicker_dataN.Value = Client.BirthDate;
+
+                if (Client != null)
+                {
+                    textBox_nume.Text = Client.FirstName;
+                    textBox_prenume.Text = Client.LastName;
+                    textBox_adresa.Text = Client.Adresa;
+                    textBox_telefon.Text = Client.Phone;
+                    textBox_email.Text = Client.Email;
+                    textBox_sex.Text = Client.Sex;
+                    dateTimePicker_dataN.Value = Client.BirthDate;
+                    copie = id;
+                }
+                else
+                {
+                    throw new Exception();
+                }
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Ati introdus un id inexistent");
             }
-        }
+}
     }
 }

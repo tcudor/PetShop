@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,7 +48,7 @@ namespace PetShop.Forms.Angajati
            
             dbContext.Angajati.Update(Angajat);
             dbContext.SaveChanges();
-            ClientiForm form = new ClientiForm() { };
+            AngajatiForm form = new AngajatiForm() { };
             form.Show();
             this.Close();
 
@@ -58,9 +59,11 @@ namespace PetShop.Forms.Angajati
         {
             int id = (int)numericUpDown_id.Value;
             int copie=id;
-            var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
-            if (Angajat != null)
-            {                          
+            try
+            {
+                var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
+                if (Angajat != null)
+                {
                     textBox_nume.Text = Angajat.FirstName;
                     textBox_prenume.Text = Angajat.LastName;
                     textBox_adresa.Text = Angajat.Adresa;
@@ -70,11 +73,15 @@ namespace PetShop.Forms.Angajati
                     dateTimePicker_dataA.Value = Angajat.DataAngajarii;
                     dateTimePicker_dataN.Value = Angajat.BirthDate;
                     copie = id;
+                }
+                else
+                {
+                    throw new Exception();
+                }
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Ati introdus un id inexistent");
-                numericUpDown_id.Value = copie;
             }
           
         }

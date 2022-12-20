@@ -1,5 +1,6 @@
 ﻿using PetShop.Data;
 using PetShop.Forms.Angajati;
+using PetShop.Forms.Animale;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -149,20 +150,35 @@ namespace PetShop.Forms.Clienti
         private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
-            var client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
-            if (client == null) 
+            int copie = id;
+            try
+            {
+                var client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
+                if (client != null)
+                {
+                    copie = id;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+            catch (Exception)
             {
                 MessageBox.Show("Ati introdus un id inexistent");
-            }
-            else
-            {
-
             }
         }
 
         private void button_refresh_Click_2(object sender, EventArgs e)
         {
             ClientiForm form = new ClientiForm() { };
+            form.Show();
+            this.Close();
+        }
+
+        private void button_view_animale_Click(object sender, EventArgs e)
+        {
+            AnimaleForm form = new AnimaleForm() { };
             form.Show();
             this.Close();
         }
