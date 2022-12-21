@@ -29,14 +29,14 @@ namespace PetShop.Forms.Angajati
         {
             var Angajat = new Angajat()
             {
-                FirstName = textBox_nume.Text,
-                LastName = textBox_prenume.Text,
-                Phone = textBox_telefon.Text,
+                Nume = textBox_nume.Text,
+                Prenume = textBox_prenume.Text,
+                Telefon = textBox_telefon.Text,
                 Email = textBox_email.Text,
                 Adresa = textBox_adresa.Text,
                 Sex = textBox_sex.Text,
-                DataAngajarii = dateTimePicker_dataA.Value,
-                BirthDate=dateTimePicker_dataN.Value
+                DataAngajare = dateTimePicker_dataA.Value,
+                DataNastere=dateTimePicker_dataN.Value
             };
             dbContext.Angajati.Add(Angajat);
             dbContext.SaveChanges();

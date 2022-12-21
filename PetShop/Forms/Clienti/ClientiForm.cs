@@ -95,14 +95,14 @@ namespace PetShop.Forms.Clienti
             }
             if (comboBox1.Text == "Nume")
             {               
-                var query = dbContext.Clienti.OrderBy(x => x.FirstName).ToList();
+                var query = dbContext.Clienti.OrderBy(x => x.Nume).ToList();
                 BS.DataSource = query;
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();
             }
             if (comboBox1.Text == "Prenume")
             {             
-                var query = dbContext.Clienti.OrderBy(x => x.LastName).ToList();
+                var query = dbContext.Clienti.OrderBy(x => x.Prenume).ToList();
                 BS.DataSource = query;
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();
@@ -116,7 +116,7 @@ namespace PetShop.Forms.Clienti
             }
             if (comboBox1.Text == "Telefon")
             {
-                var query = dbContext.Clienti.OrderBy(x => x.Phone).ToList();
+                var query = dbContext.Clienti.OrderBy(x => x.Telefon).ToList();
                 BS.DataSource = query;
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();
@@ -130,7 +130,7 @@ namespace PetShop.Forms.Clienti
             }
             if (comboBox1.Text == "Data nastere")
             {
-                var query = dbContext.Clienti.OrderBy(x => x.BirthDate).ToList();
+                var query = dbContext.Clienti.OrderBy(x => x.DataNastere).ToList();
                 BS.DataSource = query;
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();

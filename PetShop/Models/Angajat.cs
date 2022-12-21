@@ -11,23 +11,16 @@ namespace PetShop.Models
     {
         [Key]
         public int IdAngajat { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Nume { get; set; }
+        public string Prenume { get; set; }
+        public string Functie { get; set; }
         public string Email { get; set; }
         public string Adresa { get; set; }
-        public string Phone { get; set; }
+        public string Telefon { get; set; }
         public string Sex { get; set; }
+        public DateTime DataNastere { get; set; }
+        public DateTime DataAngajare { get; set; }
 
-        public DateTime BirthDate { get; set; }
-
-        public DateTime DataAngajarii { get; set; }
-
-        public enum type 
-        {
-            Admin,
-            Casier,
-            Ingrijitor
-        }
 
     }
 }

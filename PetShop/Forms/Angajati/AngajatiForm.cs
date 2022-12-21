@@ -106,16 +106,17 @@ namespace PetShop.Forms
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();
             }
+           
             if (comboBox1.Text == "Nume")
             {
-                var query = dbContext.Angajati.OrderBy(x => x.FirstName).ToList();
+                var query = dbContext.Angajati.OrderBy(x => x.Nume).ToList();
                 BS.DataSource = query;
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();
             }
             if (comboBox1.Text == "Prenume")
             {
-                var query = dbContext.Angajati.OrderBy(x => x.LastName).ToList();
+                var query = dbContext.Angajati.OrderBy(x => x.Prenume).ToList();
                 BS.DataSource = query;
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();
@@ -129,7 +130,7 @@ namespace PetShop.Forms
             }
             if (comboBox1.Text == "Telefon")
             {
-                var query = dbContext.Angajati.OrderBy(x => x.Phone).ToList();
+                var query = dbContext.Angajati.OrderBy(x => x.Telefon).ToList();
                 BS.DataSource = query;
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();
@@ -143,14 +144,14 @@ namespace PetShop.Forms
             }
             if (comboBox1.Text == "Data nastere")
             {
-                var query = dbContext.Angajati.OrderBy(x => x.BirthDate).ToList();
+                var query = dbContext.Angajati.OrderBy(x => x.DataNastere).ToList();
                 BS.DataSource = query;
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();
             }
             if (comboBox1.Text == "Data angajare")
             {
-                var query = dbContext.Angajati.OrderBy(x => x.DataAngajarii).ToList();
+                var query = dbContext.Angajati.OrderBy(x => x.DataAngajare).ToList();
                 BS.DataSource = query;
                 dataGridView1.DataSource = BS;
                 dataGridView1.Refresh();

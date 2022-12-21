@@ -12,19 +12,21 @@ namespace PetShop.Models
     {
         [Key]
         public int IdAnimal { get; set; }
-        public enum Categorie 
-        { 
-            Mamifer,
-            Pasare,
-            Peste
-        } 
+        public string Categorie { get; set; } 
         public string Rasa { get; set; }
-        public string Description { get; set; }
-        public DateTime BirthDate { get; set; }
+        public string Descriere { get; set; }
+        public string Sex { get; set; }
+        public DateTime DataNastere { get; set; }
 
-        public int IdCumparator { get; set; }
+
+
         [ForeignKey("IdCumparator")]
-        public Client Client;
+        public Client Client { get; set; }
+        public int IdCumparator { get; set; }
+       
+       
+        
+
 
     }
 }

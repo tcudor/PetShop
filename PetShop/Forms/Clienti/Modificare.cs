@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PetShop.Forms.Clienti
-{  
+{
     public partial class Modificare : Form
     {
         private readonly DBContext dbContext;
@@ -26,13 +26,13 @@ namespace PetShop.Forms.Clienti
             int id = (int)numericUpDown_id.Value;
             var Client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
 
-            Client.FirstName = textBox_nume.Text;
-            Client.LastName = textBox_prenume.Text;
-            Client.Phone = textBox_telefon.Text;
+            Client.Nume = textBox_nume.Text;
+            Client.Prenume = textBox_prenume.Text;
+            Client.Telefon = textBox_telefon.Text;
             Client.Email = textBox_email.Text;
             Client.Adresa = textBox_adresa.Text;
             Client.Sex = textBox_sex.Text;
-            Client.BirthDate = dateTimePicker_dataN.Value;
+            Client.DataNastere = dateTimePicker_dataN.Value;
 
             dbContext.Clienti.Update(Client);
             dbContext.SaveChanges();
@@ -49,13 +49,13 @@ namespace PetShop.Forms.Clienti
 
                 if (Client != null)
                 {
-                    textBox_nume.Text = Client.FirstName;
-                    textBox_prenume.Text = Client.LastName;
+                    textBox_nume.Text = Client.Nume;
+                    textBox_prenume.Text = Client.Prenume;
                     textBox_adresa.Text = Client.Adresa;
-                    textBox_telefon.Text = Client.Phone;
+                    textBox_telefon.Text = Client.Telefon;
                     textBox_email.Text = Client.Email;
                     textBox_sex.Text = Client.Sex;
-                    dateTimePicker_dataN.Value = Client.BirthDate;
+                    dateTimePicker_dataN.Value = Client.DataNastere;
                     copie = id;
                 }
                 else
@@ -67,6 +67,6 @@ namespace PetShop.Forms.Clienti
             {
                 MessageBox.Show("Ati introdus un id inexistent");
             }
-}
+        }
     }
 }

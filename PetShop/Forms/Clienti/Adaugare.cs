@@ -27,13 +27,13 @@ namespace PetShop.Forms.Clienti
         {
             var Client = new Client()
             {
-                FirstName = textBox_nume.Text,
-                LastName = textBox_prenume.Text,
-                Phone = textBox_telefon.Text,
+                Nume = textBox_nume.Text,
+                Prenume = textBox_prenume.Text,
+                Telefon = textBox_telefon.Text,
                 Email = textBox_email.Text,
                 Adresa = textBox_adresa.Text,
                 Sex = textBox_sex.Text,
-                BirthDate = dateTimePicker_dataN.Value
+                DataNastere = dateTimePicker_dataN.Value
             };
             dbContext.Clienti.Add(Client);
             dbContext.SaveChanges();
