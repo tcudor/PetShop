@@ -69,6 +69,7 @@
             this.button_adauga.TabIndex = 67;
             this.button_adauga.Text = "Adauga";
             this.button_adauga.UseVisualStyleBackColor = true;
+            this.button_adauga.Click += new System.EventHandler(this.button_adauga_Click_1);
             // 
             // textBox_sex
             // 

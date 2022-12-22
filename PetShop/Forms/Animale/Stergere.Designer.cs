@@ -55,6 +55,7 @@
             0,
             0,
             0});
+            this.numericUpDown_id.ValueChanged += new System.EventHandler(this.numericUpDown_id_ValueChanged);
             // 
             // button_stergere
             // 
@@ -64,6 +65,7 @@
             this.button_stergere.TabIndex = 8;
             this.button_stergere.Text = "Stergere";
             this.button_stergere.UseVisualStyleBackColor = true;
+            this.button_stergere.Click += new System.EventHandler(this.button_stergere_Click);
             // 
             // label1
             // 

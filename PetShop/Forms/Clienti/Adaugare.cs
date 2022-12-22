@@ -21,9 +21,9 @@ namespace PetShop.Forms.Clienti
             InitializeComponent();
             dbContext = new DBContext();
         }
+       
 
-
-        private void button_adauga_Click(object sender, EventArgs e)
+        private void button_adauga_Click_1(object sender, EventArgs e)
         {
             var Client = new Client()
             {

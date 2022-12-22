@@ -35,6 +35,7 @@
             this.button_view_animale = new System.Windows.Forms.Button();
             this.button_home = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             this.side_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -123,6 +124,7 @@
             this.button_home.TabIndex = 0;
             this.button_home.Text = "Acasa";
             this.button_home.UseVisualStyleBackColor = false;
+            this.button_home.Click += new System.EventHandler(this.button_home_Click);
             // 
             // pictureBox1
             // 
@@ -139,6 +141,11 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // sqlCommand1
+            // 
+            this.sqlCommand1.CommandTimeout = 30;
+            this.sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -146,6 +153,7 @@
             this.ClientSize = new System.Drawing.Size(1242, 808);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.side_panel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "PetShop";
             this.side_panel.ResumeLayout(false);
@@ -164,5 +172,6 @@
         private Button button_view_animale;
         private Button button_view_clienti;
         private PictureBox pictureBox1;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
     }
 }

@@ -51,8 +51,9 @@ namespace PetShop.Forms.Animale
                 }
                 else
                 {
-                    throw new Exception();
                     button_adauga.Enabled = false;
+                    throw new Exception();
+                    
                 }
             }
             catch (Exception)

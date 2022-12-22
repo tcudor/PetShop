@@ -43,20 +43,10 @@ namespace PetShop
             this.Close();
         }
 
+        private void button_home_Click(object sender, EventArgs e)
+        {
 
-
-
-
-        //var Angajat = dbContext.Angajats.FirstOrDefault(x => x.IdAngajat == 1);
-        //var Angajat = new Angajat()
-        //{
-        //    FirstName = wfaffa.Text,
-
-        //}
-        //dbContext.Angajats.Add(Angajat);
-        //dbContext.Angajats.Remove(Angajat);
-        //dbContext.SaveChanges();
-        //MessageBox.Show(Angajat.Phone);
+        }
 
 
 
