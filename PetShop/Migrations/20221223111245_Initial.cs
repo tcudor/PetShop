@@ -52,6 +52,18 @@ namespace PetShop.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Power = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Animale",
                 columns: table => new
                 {
@@ -89,6 +101,9 @@ namespace PetShop.Migrations
 
             migrationBuilder.DropTable(
                 name: "Animale");
+
+            migrationBuilder.DropTable(
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Clienti");

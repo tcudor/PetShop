@@ -146,6 +146,22 @@ namespace PetShop.Migrations
                     b.ToTable("Clienti");
                 });
 
+            modelBuilder.Entity("PetShop.Models.User", b =>
+                {
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Power")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("PetShop.Models.Animal", b =>
                 {
                     b.HasOne("PetShop.Models.Client", "Client")

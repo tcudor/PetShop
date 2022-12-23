@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using PetShop.Data;
+using PetShop.Forms;
 using PetShop.Forms.Angajati;
 
 namespace PetShop
@@ -32,8 +33,8 @@ namespace PetShop
             ConfigureServices();
             SeedDB();
             ApplicationConfiguration.Initialize();
-            var main_form = new MainForm();
-            main_form.Show();
+            var first_form = new LoginForm();
+            first_form.Show();
             Application.Run();
         }
     }
