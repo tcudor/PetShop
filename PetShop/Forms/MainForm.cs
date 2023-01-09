@@ -14,6 +14,11 @@ namespace PetShop
         {
             InitializeComponent();
             dbContext = new DBContext();
+            var user = dbContext.Users.FirstOrDefault(x => x.Power == 2);
+            if (user == null)
+            {
+                button_adduser.Enabled = false;
+            }
         }
 
         private void button_view_angajati_Click(object sender, EventArgs e)
@@ -43,12 +48,12 @@ namespace PetShop
             this.Close();
         }
 
-        private void button_home_Click(object sender, EventArgs e)
+       
+
+        private void button_adduser_Click(object sender, EventArgs e)
         {
-
+            AddUserForm form = new AddUserForm();
+            form.Show();
         }
-
-
-
     }
 }

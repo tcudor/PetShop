@@ -23,7 +23,7 @@ namespace PetShop.Forms
             var query = dbContext.Users.ToList();
             foreach ( var item in query )
             {
-                item.Power = false;
+                item.Power = 0;
                 dbContext.Users.Update(item);
                 dbContext.SaveChanges();
             }
@@ -31,7 +31,6 @@ namespace PetShop.Forms
 
         private void button_continua_Click(object sender, EventArgs e)
         {
-            
             MainForm form = new MainForm();
             form.Show();
             this.Close();
@@ -39,12 +38,16 @@ namespace PetShop.Forms
 
         private void button_login_Click(object sender, EventArgs e)
         {
-            var User = dbContext.Users.First(x => x.Username == textBox1.Text);
+            var User = dbContext.Users.FirstOrDefault(x => x.Username == textBox1.Text);
             if (User != null)
             {
                 if(User.Password==textBox2.Text)
                 {
-                    User.Power = true;
+                    
+                    if(User.Username=="admin")
+                        User.Power = 2;
+                    else
+                        User.Power = 1;
                     dbContext.Users.Update(User);
                     dbContext.SaveChanges();
                     MainForm form = new MainForm();
@@ -62,5 +65,7 @@ namespace PetShop.Forms
             }
            
         }
+
+       
     }
 }

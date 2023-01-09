@@ -56,9 +56,11 @@ namespace PetShop.Forms.Animale
                     comboBox_sex.Text = Animal.Sex;
                     dateTimePicker_dataN.Value = Animal.DataNastere;
                     copie = id;
+                    button_modifica.Enabled = true;
                 }
                 else
                 {
+                    button_modifica.Enabled = false;
                     throw new Exception();
                 }
             }

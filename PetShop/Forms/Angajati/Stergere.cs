@@ -36,9 +36,11 @@ namespace PetShop.Forms.Angajati
                     AngajatiForm form = new AngajatiForm() { };
                     form.Show();
                     this.Close();
+                    button_stergere.Enabled = true;
                 }
                 else
                 {
+                    button_stergere.Enabled = false;
                     throw new Exception();
                 }
             }

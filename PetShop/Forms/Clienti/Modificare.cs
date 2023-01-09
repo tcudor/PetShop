@@ -49,6 +49,7 @@ namespace PetShop.Forms.Clienti
 
                 if (Client != null)
                 {
+                    button_modifica.Enabled = false;
                     textBox_nume.Text = Client.Nume;
                     textBox_prenume.Text = Client.Prenume;
                     textBox_adresa.Text = Client.Adresa;
@@ -57,9 +58,11 @@ namespace PetShop.Forms.Clienti
                     textBox_sex.Text = Client.Sex;
                     dateTimePicker_dataN.Value = Client.DataNastere;
                     copie = id;
+
                 }
                 else
                 {
+                    button_modifica.Enabled = false;
                     throw new Exception();
                 }
             }

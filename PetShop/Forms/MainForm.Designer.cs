@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.side_panel = new System.Windows.Forms.Panel();
+            this.button_adduser = new System.Windows.Forms.Button();
             this.button_view_clienti = new System.Windows.Forms.Button();
             this.button_exit = new System.Windows.Forms.Button();
             this.button_view_angajati = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.side_panel.AutoSize = true;
             this.side_panel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.side_panel.Controls.Add(this.button_adduser);
             this.side_panel.Controls.Add(this.button_view_clienti);
             this.side_panel.Controls.Add(this.button_exit);
             this.side_panel.Controls.Add(this.button_view_angajati);
@@ -55,6 +57,20 @@
             this.side_panel.Name = "side_panel";
             this.side_panel.Size = new System.Drawing.Size(131, 811);
             this.side_panel.TabIndex = 1;
+            // 
+            // button_adduser
+            // 
+            this.button_adduser.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_adduser.FlatAppearance.BorderSize = 0;
+            this.button_adduser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_adduser.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_adduser.Location = new System.Drawing.Point(3, 488);
+            this.button_adduser.Name = "button_adduser";
+            this.button_adduser.Size = new System.Drawing.Size(119, 52);
+            this.button_adduser.TabIndex = 5;
+            this.button_adduser.Text = "Adaugare User";
+            this.button_adduser.UseVisualStyleBackColor = false;
+            this.button_adduser.Click += new System.EventHandler(this.button_adduser_Click);
             // 
             // button_view_clienti
             // 
@@ -124,7 +140,6 @@
             this.button_home.TabIndex = 0;
             this.button_home.Text = "Acasa";
             this.button_home.UseVisualStyleBackColor = false;
-            this.button_home.Click += new System.EventHandler(this.button_home_Click);
             // 
             // pictureBox1
             // 
@@ -173,5 +188,6 @@
         private Button button_view_clienti;
         private PictureBox pictureBox1;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private Button button_adduser;
     }
 }

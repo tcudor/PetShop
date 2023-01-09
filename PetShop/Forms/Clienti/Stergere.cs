@@ -28,6 +28,7 @@ namespace PetShop.Forms.Clienti
                 var Client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
                 if (Client != null)
                 {
+                    button_stergere.Enabled = true;
                     dbContext.Clienti.Remove(Client);
                     dbContext.SaveChanges();
                     ClientiForm form = new ClientiForm() { };
@@ -36,6 +37,7 @@ namespace PetShop.Forms.Clienti
                 }
                 else
                 {
+                    button_stergere.Enabled = false;
                     throw new Exception();
                 }
             }

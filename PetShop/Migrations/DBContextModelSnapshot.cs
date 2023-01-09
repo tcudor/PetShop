@@ -148,16 +148,24 @@ namespace PetShop.Migrations
 
             modelBuilder.Entity("PetShop.Models.User", b =>
                 {
+                    b.Property<int>("IdUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdUser"));
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Power")
-                        .HasColumnType("bit");
+                    b.Property<int>("Power")
+                        .HasColumnType("int");
 
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdUser");
 
                     b.ToTable("Users");
                 });

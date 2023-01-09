@@ -12,8 +12,8 @@ using PetShop.Data;
 namespace PetShop.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20221223111245_Initial")]
-    partial class Initial
+    [Migration("20230109132723_First")]
+    partial class First
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -151,16 +151,24 @@ namespace PetShop.Migrations
 
             modelBuilder.Entity("PetShop.Models.User", b =>
                 {
+                    b.Property<int>("IdUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdUser"));
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Power")
-                        .HasColumnType("bit");
+                    b.Property<int>("Power")
+                        .HasColumnType("int");
 
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdUser");
 
                     b.ToTable("Users");
                 });

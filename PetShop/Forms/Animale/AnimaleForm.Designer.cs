@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel_up = new System.Windows.Forms.Panel();
+            this.comboBox_ID = new System.Windows.Forms.ComboBox();
             this.button_refresh = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown_id = new System.Windows.Forms.NumericUpDown();
@@ -55,7 +56,6 @@
             this.dataNastereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCumparatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox_ID = new System.Windows.Forms.ComboBox();
             this.panel_up.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,6 +82,17 @@
             this.panel_up.Name = "panel_up";
             this.panel_up.Size = new System.Drawing.Size(1447, 95);
             this.panel_up.TabIndex = 16;
+            // 
+            // comboBox_ID
+            // 
+            this.comboBox_ID.FormattingEnabled = true;
+            this.comboBox_ID.Items.AddRange(new object[] {
+            "IdAnimal",
+            "IdCumparator"});
+            this.comboBox_ID.Location = new System.Drawing.Point(467, 54);
+            this.comboBox_ID.Name = "comboBox_ID";
+            this.comboBox_ID.Size = new System.Drawing.Size(151, 28);
+            this.comboBox_ID.TabIndex = 25;
             // 
             // button_refresh
             // 
@@ -182,7 +193,7 @@
             this.button_adauga.Name = "button_adauga";
             this.button_adauga.Size = new System.Drawing.Size(174, 95);
             this.button_adauga.TabIndex = 10;
-            this.button_adauga.Text = "Adaugare Client";
+            this.button_adauga.Text = "Adaugare Animal";
             this.button_adauga.UseVisualStyleBackColor = false;
             this.button_adauga.Click += new System.EventHandler(this.button_adauga_Click);
             // 
@@ -199,7 +210,7 @@
             this.button_modifica.Name = "button_modifica";
             this.button_modifica.Size = new System.Drawing.Size(189, 95);
             this.button_modifica.TabIndex = 11;
-            this.button_modifica.Text = "Modificare Client";
+            this.button_modifica.Text = "Modificare Animal";
             this.button_modifica.UseVisualStyleBackColor = false;
             this.button_modifica.Click += new System.EventHandler(this.button_modifica_Click);
             // 
@@ -216,7 +227,7 @@
             this.button_stergere.Name = "button_stergere";
             this.button_stergere.Size = new System.Drawing.Size(160, 95);
             this.button_stergere.TabIndex = 12;
-            this.button_stergere.Text = "Stergere Client";
+            this.button_stergere.Text = "Stergere Animal";
             this.button_stergere.UseVisualStyleBackColor = false;
             this.button_stergere.Click += new System.EventHandler(this.button_stergere_Click);
             // 
@@ -412,17 +423,6 @@
             // animalBindingSource
             // 
             this.animalBindingSource.DataSource = typeof(PetShop.Models.Animal);
-            // 
-            // comboBox_ID
-            // 
-            this.comboBox_ID.FormattingEnabled = true;
-            this.comboBox_ID.Items.AddRange(new object[] {
-            "IdAnimal",
-            "IdCumparator"});
-            this.comboBox_ID.Location = new System.Drawing.Point(467, 54);
-            this.comboBox_ID.Name = "comboBox_ID";
-            this.comboBox_ID.Size = new System.Drawing.Size(151, 28);
-            this.comboBox_ID.TabIndex = 25;
             // 
             // AnimaleForm
             // 

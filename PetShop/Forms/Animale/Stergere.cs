@@ -28,14 +28,17 @@ namespace PetShop.Forms.Animale
                 var Animal = dbContext.Animale.FirstOrDefault(x => x.IdAnimal == id);
                 if (Animal != null)
                 {
+                    button_stergere.Enabled = true;
                     dbContext.Animale.Remove(Animal);
                     dbContext.SaveChanges();
                     AngajatiForm form = new AngajatiForm() { };
                     form.Show();
                     this.Close();
+                    
                 }
                 else
                 {
+                    button_stergere.Enabled = false;
                     throw new Exception();
                 }
             }

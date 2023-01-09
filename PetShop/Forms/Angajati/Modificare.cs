@@ -64,6 +64,7 @@ namespace PetShop.Forms.Angajati
                 var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
                 if (Angajat != null)
                 {
+                    button_modifica.Enabled = false;
                     textBox_nume.Text = Angajat.Nume;
                     textBox_prenume.Text = Angajat.Prenume;
                     textBox_adresa.Text = Angajat.Adresa;
@@ -73,9 +74,11 @@ namespace PetShop.Forms.Angajati
                     dateTimePicker_dataA.Value = Angajat.DataAngajare;
                     dateTimePicker_dataN.Value = Angajat.DataNastere;
                     copie = id;
+                   
                 }
                 else
                 {
+                    button_modifica.Enabled = false;
                     throw new Exception();
                 }
             }

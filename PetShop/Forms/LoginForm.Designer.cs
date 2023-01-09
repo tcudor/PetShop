@@ -91,13 +91,14 @@
             this.button_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_admin.Font = new System.Drawing.Font("SimSun", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_admin.Location = new System.Drawing.Point(127, 43);
-            this.button_admin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_admin.Margin = new System.Windows.Forms.Padding(2);
             this.button_admin.Name = "button_admin";
             this.button_admin.Size = new System.Drawing.Size(392, 75);
             this.button_admin.TabIndex = 4;
             this.button_admin.Text = "Autentificare ca administrator";
             this.button_admin.UseVisualStyleBackColor = true;
-            // 
+           
+            //
             // button_continua
             // 
             this.button_continua.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -105,8 +106,8 @@
             this.button_continua.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_continua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_continua.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_continua.Location = new System.Drawing.Point(486, 266);
-            this.button_continua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_continua.Location = new System.Drawing.Point(486, 274);
+            this.button_continua.Margin = new System.Windows.Forms.Padding(2);
             this.button_continua.Name = "button_continua";
             this.button_continua.Size = new System.Drawing.Size(172, 75);
             this.button_continua.TabIndex = 5;
@@ -122,7 +123,7 @@
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_login.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_login.Location = new System.Drawing.Point(250, 236);
-            this.button_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_login.Margin = new System.Windows.Forms.Padding(2);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(102, 34);
             this.button_login.TabIndex = 6;
