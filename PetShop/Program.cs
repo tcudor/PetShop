@@ -1,3 +1,4 @@
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using PetShop.Data;
 using PetShop.Forms;
@@ -15,6 +16,7 @@ namespace PetShop
             services.AddDbContext<DBContext>();
             services.AddScoped<IInitializer,Initializer>();
             ServiceProvider=services.BuildServiceProvider();
+            ValidatorOptions.Global.DefaultClassLevelCascadeMode = CascadeMode.StopOnFirstFailure;
         }
 
         public static void SeedDB()

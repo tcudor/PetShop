@@ -44,7 +44,7 @@ namespace PetShop.Forms
                 if(User.Password==textBox2.Text)
                 {
                     
-                    if(User.Username=="admin")
+                    if(User.Username=="superuser")
                         User.Power = 2;
                     else
                         User.Power = 1;

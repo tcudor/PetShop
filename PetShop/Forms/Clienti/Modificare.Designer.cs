@@ -33,7 +33,6 @@
             this.dateTimePicker_dataA = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_dataN = new System.Windows.Forms.DateTimePicker();
             this.button_modifica = new System.Windows.Forms.Button();
-            this.textBox_sex = new System.Windows.Forms.TextBox();
             this.textBox_email = new System.Windows.Forms.TextBox();
             this.textBox_adresa = new System.Windows.Forms.TextBox();
             this.textBox_telefon = new System.Windows.Forms.TextBox();
@@ -47,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox_sex = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,13 +105,6 @@
             this.button_modifica.Text = "Modifica";
             this.button_modifica.UseVisualStyleBackColor = true;
             this.button_modifica.Click += new System.EventHandler(this.button_modifica_Click);
-            // 
-            // textBox_sex
-            // 
-            this.textBox_sex.Location = new System.Drawing.Point(133, 307);
-            this.textBox_sex.Name = "textBox_sex";
-            this.textBox_sex.Size = new System.Drawing.Size(290, 27);
-            this.textBox_sex.TabIndex = 34;
             // 
             // textBox_email
             // 
@@ -220,17 +213,28 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Nume :";
             // 
+            // comboBox_sex
+            // 
+            this.comboBox_sex.FormattingEnabled = true;
+            this.comboBox_sex.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.comboBox_sex.Location = new System.Drawing.Point(133, 307);
+            this.comboBox_sex.Name = "comboBox_sex";
+            this.comboBox_sex.Size = new System.Drawing.Size(41, 28);
+            this.comboBox_sex.TabIndex = 80;
+            // 
             // Modificare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 559);
+            this.Controls.Add(this.comboBox_sex);
             this.Controls.Add(this.numericUpDown_id);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker_dataA);
             this.Controls.Add(this.dateTimePicker_dataN);
             this.Controls.Add(this.button_modifica);
-            this.Controls.Add(this.textBox_sex);
             this.Controls.Add(this.textBox_email);
             this.Controls.Add(this.textBox_adresa);
             this.Controls.Add(this.textBox_telefon);
@@ -260,7 +264,6 @@
         private DateTimePicker dateTimePicker_dataA;
         private DateTimePicker dateTimePicker_dataN;
         private Button button_modifica;
-        private TextBox textBox_sex;
         private TextBox textBox_email;
         private TextBox textBox_adresa;
         private TextBox textBox_telefon;
@@ -274,5 +277,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private ComboBox comboBox_sex;
     }
 }

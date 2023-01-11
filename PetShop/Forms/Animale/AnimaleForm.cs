@@ -23,16 +23,12 @@ namespace PetShop.Forms.Animale
             InitializeComponent();
             dbContext = new DBContext();
             var user = dbContext.Users.FirstOrDefault(x => x.Power == 0);
-            if (user == null)
+            if (user != null)
             {
                 button_modifica.Enabled = false;
                 button_refresh.Enabled = false;
                 button_stergere.Enabled = false;
                 button_adauga.Enabled = false;
-                comboBox1.Enabled = false;
-                numericUpDown_id.Enabled = false;
-                comboBox_ID.Enabled=false;
-                button1.Enabled=false;
 
             }
             comboBox_ID.SelectedIndex= 0;

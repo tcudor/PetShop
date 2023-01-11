@@ -1,4 +1,5 @@
 ﻿using PetShop.Data;
+using PetShop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +19,19 @@ namespace PetShop.Forms.Animale
         {
             InitializeComponent();
             dbContext = new DBContext();
+            button_stergere.Enabled = false;
         }
 
         private void button_stergere_Click(object sender, EventArgs e)
+        {
+            int id = (int)numericUpDown_id.Value;
+            var Animal = dbContext.Animale.FirstOrDefault(x => x.IdAnimal == id);
+            dbContext.Animale.Remove(Animal);
+            dbContext.SaveChanges();
+            this.Close();
+        }
+
+        private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
             try
@@ -29,12 +40,6 @@ namespace PetShop.Forms.Animale
                 if (Animal != null)
                 {
                     button_stergere.Enabled = true;
-                    dbContext.Animale.Remove(Animal);
-                    dbContext.SaveChanges();
-                    AngajatiForm form = new AngajatiForm() { };
-                    form.Show();
-                    this.Close();
-                    
                 }
                 else
                 {
@@ -46,12 +51,6 @@ namespace PetShop.Forms.Animale
             {
                 MessageBox.Show("Ati introdus un id inexistent");
             }
-
-        }
-
-        private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -253,9 +253,9 @@
             this.side_panel.Controls.Add(this.button_view_angajati);
             this.side_panel.Controls.Add(this.button_view_animale);
             this.side_panel.Controls.Add(this.button_home);
-            this.side_panel.Location = new System.Drawing.Point(1, -88);
+            this.side_panel.Location = new System.Drawing.Point(0, -88);
             this.side_panel.Name = "side_panel";
-            this.side_panel.Size = new System.Drawing.Size(131, 975);
+            this.side_panel.Size = new System.Drawing.Size(132, 975);
             this.side_panel.TabIndex = 15;
             // 
             // button_view_clienti
@@ -359,8 +359,8 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.RowHeadersWidth = 50;
+            this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.Size = new System.Drawing.Size(1318, 709);
             this.dataGridView1.TabIndex = 17;
             // 

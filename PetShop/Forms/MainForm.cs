@@ -17,7 +17,7 @@ namespace PetShop
             var user = dbContext.Users.FirstOrDefault(x => x.Power == 2);
             if (user == null)
             {
-                button_adduser.Enabled = false;
+                button_adduser.Visible = false;
             }
         }
 

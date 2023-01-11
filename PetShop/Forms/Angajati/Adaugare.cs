@@ -34,9 +34,9 @@ namespace PetShop.Forms.Angajati
                 Telefon = textBox_telefon.Text,
                 Email = textBox_email.Text,
                 Adresa = textBox_adresa.Text,
-                Sex = textBox_sex.Text,
+                Sex = comboBox_sex.Text,
                 DataAngajare = dateTimePicker_dataA.Value,
-                DataNastere=dateTimePicker_dataN.Value
+                DataNastere=dateTimePicker_dataN.Value.Date
             };
             dbContext.Angajati.Add(Angajat);
             dbContext.SaveChanges();

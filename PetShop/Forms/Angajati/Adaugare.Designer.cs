@@ -41,10 +41,10 @@
             this.textBox_telefon = new System.Windows.Forms.TextBox();
             this.textBox_adresa = new System.Windows.Forms.TextBox();
             this.textBox_email = new System.Windows.Forms.TextBox();
-            this.textBox_sex = new System.Windows.Forms.TextBox();
             this.button_adauga = new System.Windows.Forms.Button();
             this.dateTimePicker_dataN = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_dataA = new System.Windows.Forms.DateTimePicker();
+            this.comboBox_sex = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -154,13 +154,6 @@
             this.textBox_email.Size = new System.Drawing.Size(289, 27);
             this.textBox_email.TabIndex = 12;
             // 
-            // textBox_sex
-            // 
-            this.textBox_sex.Location = new System.Drawing.Point(133, 267);
-            this.textBox_sex.Name = "textBox_sex";
-            this.textBox_sex.Size = new System.Drawing.Size(290, 27);
-            this.textBox_sex.TabIndex = 13;
-            // 
             // button_adauga
             // 
             this.button_adauga.Location = new System.Drawing.Point(162, 417);
@@ -185,15 +178,26 @@
             this.dateTimePicker_dataA.Size = new System.Drawing.Size(250, 27);
             this.dateTimePicker_dataA.TabIndex = 18;
             // 
+            // comboBox_sex
+            // 
+            this.comboBox_sex.FormattingEnabled = true;
+            this.comboBox_sex.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.comboBox_sex.Location = new System.Drawing.Point(133, 267);
+            this.comboBox_sex.Name = "comboBox_sex";
+            this.comboBox_sex.Size = new System.Drawing.Size(41, 28);
+            this.comboBox_sex.TabIndex = 68;
+            // 
             // Adaugare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 559);
+            this.Controls.Add(this.comboBox_sex);
             this.Controls.Add(this.dateTimePicker_dataA);
             this.Controls.Add(this.dateTimePicker_dataN);
             this.Controls.Add(this.button_adauga);
-            this.Controls.Add(this.textBox_sex);
             this.Controls.Add(this.textBox_email);
             this.Controls.Add(this.textBox_adresa);
             this.Controls.Add(this.textBox_telefon);
@@ -230,9 +234,9 @@
         private TextBox textBox_telefon;
         private TextBox textBox_adresa;
         private TextBox textBox_email;
-        private TextBox textBox_sex;
         private Button button_adauga;
         private DateTimePicker dateTimePicker_dataN;
         private DateTimePicker dateTimePicker_dataA;
+        private ComboBox comboBox_sex;
     }
 }

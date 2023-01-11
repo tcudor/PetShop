@@ -20,6 +20,7 @@ namespace PetShop.Forms.Animale
         {
             InitializeComponent();
             dbContext = new DBContext();
+            button_modifica.Enabled = false;
         }
 
         private void button_modifica_Click(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace PetShop.Forms.Animale
             Animal.Descriere = textBox_descriere.Text;
             Animal.IdCumparator = (int)numericUpDown_idcumparator.Value;
             Animal.Sex = comboBox_sex.Text;
-            Animal.DataNastere = dateTimePicker_dataN.Value;
+            Animal.DataNastere = dateTimePicker_dataN.Value.Date;
         
             dbContext.Animale.Update(Animal);
             dbContext.SaveChanges();
@@ -42,7 +43,6 @@ namespace PetShop.Forms.Animale
         private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
-            int copie = id;
             var Animal = dbContext.Animale.FirstOrDefault(x => x.IdAnimal == id);
             try
             {
@@ -55,7 +55,6 @@ namespace PetShop.Forms.Animale
                     numericUpDown_idcumparator.Value = Animal.IdCumparator;
                     comboBox_sex.Text = Animal.Sex;
                     dateTimePicker_dataN.Value = Animal.DataNastere;
-                    copie = id;
                     button_modifica.Enabled = true;
                 }
                 else

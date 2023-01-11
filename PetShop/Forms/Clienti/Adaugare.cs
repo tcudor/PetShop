@@ -1,5 +1,7 @@
-﻿using PetShop.Data;
+﻿using FluentValidation.Results;
+using PetShop.Data;
 using PetShop.Models;
+using PetShop.Validator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,12 +34,30 @@ namespace PetShop.Forms.Clienti
                 Telefon = textBox_telefon.Text,
                 Email = textBox_email.Text,
                 Adresa = textBox_adresa.Text,
-                Sex = textBox_sex.Text,
-                DataNastere = dateTimePicker_dataN.Value
+                Sex = comboBox_sex.Text,
+                DataNastere = dateTimePicker_dataN.Value.Date
             };
-            dbContext.Clienti.Add(Client);
-            dbContext.SaveChanges();
-            this.Close();
+            if (Client != null)
+            {
+
+                ClientValidator Validator=new ClientValidator();
+                ValidationResult results=Validator.Validate(Client);
+                IList<ValidationFailure> failures=results.Errors;
+                if (!results.IsValid)
+                {
+                    foreach(ValidationFailure failure in failures)
+                    {
+                        MessageBox.Show(failure.ErrorMessage,"Message",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    dbContext.Clienti.Add(Client);
+                    dbContext.SaveChanges();
+                    this.Close();
+                }
+            }
+            
         }
     }
 }

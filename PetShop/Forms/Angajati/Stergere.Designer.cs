@@ -74,7 +74,8 @@
             0,
             0,
             0});
-            //
+            this.numericUpDown_id.ValueChanged += new System.EventHandler(this.numericUpDown_id_ValueChanged);
+            // 
             // Stergere
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);

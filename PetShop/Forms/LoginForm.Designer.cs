@@ -65,8 +65,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(250, 120);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(155, 34);
@@ -76,10 +75,10 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.textBox2.Location = new System.Drawing.Point(250, 171);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(155, 34);
             this.textBox2.TabIndex = 3;
             // 
@@ -97,8 +96,7 @@
             this.button_admin.TabIndex = 4;
             this.button_admin.Text = "Autentificare ca administrator";
             this.button_admin.UseVisualStyleBackColor = true;
-           
-            //
+            // 
             // button_continua
             // 
             this.button_continua.FlatAppearance.BorderColor = System.Drawing.Color.Black;

@@ -36,8 +36,7 @@
             // 
             // numericUpDown_id
             // 
-            this.numericUpDown_id.Location = new System.Drawing.Point(110, 26);
-            this.numericUpDown_id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDown_id.Location = new System.Drawing.Point(126, 35);
             this.numericUpDown_id.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -49,20 +48,20 @@
             0,
             0});
             this.numericUpDown_id.Name = "numericUpDown_id";
-            this.numericUpDown_id.Size = new System.Drawing.Size(131, 23);
+            this.numericUpDown_id.Size = new System.Drawing.Size(150, 27);
             this.numericUpDown_id.TabIndex = 6;
             this.numericUpDown_id.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.numericUpDown_id.ValueChanged += new System.EventHandler(this.numericUpDown_id_ValueChanged);
             // 
             // button_stergere
             // 
-            this.button_stergere.Location = new System.Drawing.Point(88, 82);
-            this.button_stergere.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_stergere.Location = new System.Drawing.Point(101, 109);
             this.button_stergere.Name = "button_stergere";
-            this.button_stergere.Size = new System.Drawing.Size(82, 22);
+            this.button_stergere.Size = new System.Drawing.Size(94, 29);
             this.button_stergere.TabIndex = 5;
             this.button_stergere.Text = "Stergere";
             this.button_stergere.UseVisualStyleBackColor = true;
@@ -71,20 +70,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 27);
+            this.label1.Location = new System.Drawing.Point(41, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 15);
+            this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Dati id-ul :";
             // 
             // Stergere
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 132);
+            this.ClientSize = new System.Drawing.Size(303, 176);
             this.Controls.Add(this.numericUpDown_id);
             this.Controls.Add(this.button_stergere);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Stergere";
             this.Text = "Stergere";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).EndInit();

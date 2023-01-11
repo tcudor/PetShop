@@ -20,6 +20,7 @@ namespace PetShop.Forms.Animale
         {
             InitializeComponent();
             dbContext = new DBContext();
+            button_adauga.Enabled = false;
         }
 
         private void button_adauga_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace PetShop.Forms.Animale
                 Descriere = textBox_descriere.Text,
                 IdCumparator = (int)numericUpDown_id.Value,
                 Sex = comboBox_sex.Text,
-                DataNastere = dateTimePicker_dataN.Value
+                DataNastere = dateTimePicker_dataN.Value.Date
             };
             dbContext.Animale.Add(Animal);
             dbContext.SaveChanges();

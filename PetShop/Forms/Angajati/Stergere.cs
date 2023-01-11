@@ -21,9 +21,19 @@ namespace PetShop.Forms.Angajati
 
             InitializeComponent();
             dbContext = new DBContext();
+            button_stergere.Enabled = false;
         }
 
         private void button_stergere_Click(object sender, EventArgs e)
+        {
+            int id = (int)numericUpDown_id.Value;
+            var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
+            dbContext.Angajati.Remove(Angajat);
+            dbContext.SaveChanges();
+            this.Close();
+        }
+
+        private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
             try
@@ -31,11 +41,6 @@ namespace PetShop.Forms.Angajati
                 var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
                 if (Angajat != null)
                 {
-                    dbContext.Angajati.Remove(Angajat);
-                    dbContext.SaveChanges();
-                    AngajatiForm form = new AngajatiForm() { };
-                    form.Show();
-                    this.Close();
                     button_stergere.Enabled = true;
                 }
                 else

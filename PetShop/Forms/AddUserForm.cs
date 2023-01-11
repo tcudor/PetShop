@@ -28,7 +28,7 @@ namespace PetShop.Forms
             {
                 Username = textBox_username.Text,
                 Password = textBox_parola.Text,
-                Power = (int)numericUpDown1.Value
+                Power = 1
             };
             dbContext.Users.Add(user);
             dbContext.SaveChanges();

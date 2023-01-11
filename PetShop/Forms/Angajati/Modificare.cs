@@ -26,7 +26,8 @@ namespace PetShop.Forms.Angajati
            
             InitializeComponent();
             dbContext = new DBContext();
-            
+            button_modifica.Enabled = false;
+
         }
 
        
@@ -42,9 +43,9 @@ namespace PetShop.Forms.Angajati
             Angajat.Telefon = textBox_telefon.Text;
             Angajat.Email = textBox_email.Text;
             Angajat.Adresa = textBox_adresa.Text;
-            Angajat.Sex = textBox_sex.Text;
+            Angajat.Sex = comboBox_sex.Text;
             Angajat.DataAngajare = dateTimePicker_dataA.Value;
-            Angajat.DataNastere = dateTimePicker_dataN.Value;
+            Angajat.DataNastere = dateTimePicker_dataN.Value.Date;
            
             dbContext.Angajati.Update(Angajat);
             dbContext.SaveChanges();
@@ -58,23 +59,20 @@ namespace PetShop.Forms.Angajati
         private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
-            int copie=id;
             try
             {
                 var Angajat = dbContext.Angajati.FirstOrDefault(x => x.IdAngajat == id);
                 if (Angajat != null)
                 {
-                    button_modifica.Enabled = false;
+                    button_modifica.Enabled = true;
                     textBox_nume.Text = Angajat.Nume;
                     textBox_prenume.Text = Angajat.Prenume;
                     textBox_adresa.Text = Angajat.Adresa;
                     textBox_telefon.Text = Angajat.Telefon;
                     textBox_email.Text = Angajat.Email;
-                    textBox_sex.Text = Angajat.Sex;
+                    comboBox_sex.Text = Angajat.Sex;
                     dateTimePicker_dataA.Value = Angajat.DataAngajare;
                     dateTimePicker_dataN.Value = Angajat.DataNastere;
-                    copie = id;
-                   
                 }
                 else
                 {

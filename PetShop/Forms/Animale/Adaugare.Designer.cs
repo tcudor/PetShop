@@ -50,7 +50,7 @@
             this.comboBox_sex.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.comboBox_sex.Location = new System.Drawing.Point(94, 298);
+            this.comboBox_sex.Location = new System.Drawing.Point(124, 298);
             this.comboBox_sex.Name = "comboBox_sex";
             this.comboBox_sex.Size = new System.Drawing.Size(41, 28);
             this.comboBox_sex.TabIndex = 67;

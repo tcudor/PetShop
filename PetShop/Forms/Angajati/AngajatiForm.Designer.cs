@@ -37,23 +37,23 @@
             this.button_view_animale = new System.Windows.Forms.Button();
             this.button_home = new System.Windows.Forms.Button();
             this.panel_up = new System.Windows.Forms.Panel();
-            this.button_refresh = new System.Windows.Forms.Button();
-            this.button_adauga = new System.Windows.Forms.Button();
-            this.button_modifica = new System.Windows.Forms.Button();
-            this.button_stergere = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown_id = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_refresh = new System.Windows.Forms.Button();
+            this.button_adauga = new System.Windows.Forms.Button();
+            this.button_modifica = new System.Windows.Forms.Button();
+            this.button_stergere = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.angajatBindingSource)).BeginInit();
             this.side_panel.SuspendLayout();
             this.panel_up.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // angajatBindingSource
@@ -130,6 +130,7 @@
             this.button_view_animale.TabIndex = 1;
             this.button_view_animale.Text = "Vizualizare Animale";
             this.button_view_animale.UseVisualStyleBackColor = false;
+            this.button_view_animale.Click += new System.EventHandler(this.button_view_animale_Click);
             // 
             // button_home
             // 
@@ -163,6 +164,87 @@
             this.panel_up.Name = "panel_up";
             this.panel_up.Size = new System.Drawing.Size(1566, 95);
             this.panel_up.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(481, 63);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Aplica";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // numericUpDown_id
+            // 
+            this.numericUpDown_id.Location = new System.Drawing.Point(311, 65);
+            this.numericUpDown_id.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown_id.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_id.Name = "numericUpDown_id";
+            this.numericUpDown_id.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDown_id.TabIndex = 32;
+            this.numericUpDown_id.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_id.ValueChanged += new System.EventHandler(this.numericUpDown_id_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(128, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 28);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Cauta dupa id :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "IdAngajat",
+            "Nume",
+            "Prenume",
+            "Email",
+            "Adresa",
+            "Telefon",
+            "Dana nastere",
+            "Data angajare"});
+            this.comboBox1.Location = new System.Drawing.Point(310, 13);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.TabIndex = 31;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(128, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 28);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Sorteaza dupa :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PetShop.Properties.Resources.download;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // button_refresh
             // 
@@ -247,91 +329,10 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.RowHeadersWidth = 50;
+            this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.Size = new System.Drawing.Size(1441, 786);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PetShop.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(481, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Aplica";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // numericUpDown_id
-            // 
-            this.numericUpDown_id.Location = new System.Drawing.Point(311, 65);
-            this.numericUpDown_id.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown_id.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_id.Name = "numericUpDown_id";
-            this.numericUpDown_id.Size = new System.Drawing.Size(150, 27);
-            this.numericUpDown_id.TabIndex = 32;
-            this.numericUpDown_id.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_id.ValueChanged += new System.EventHandler(this.numericUpDown_id_ValueChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(128, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 28);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Cauta dupa id :";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "IdAngajat",
-            "Nume",
-            "Prenume",
-            "Email",
-            "Adresa",
-            "Telefon",
-            "Dana nastere",
-            "Data angajare"});
-            this.comboBox1.Location = new System.Drawing.Point(310, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 31;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(128, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 28);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Sorteaza dupa :";
             // 
             // AngajatiForm
             // 
@@ -349,9 +350,9 @@
             this.side_panel.ResumeLayout(false);
             this.panel_up.ResumeLayout(false);
             this.panel_up.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

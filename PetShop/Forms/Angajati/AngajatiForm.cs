@@ -15,6 +15,7 @@ using PetShop.Forms.Clienti;
 using Stergere = PetShop.Forms.Angajati.Stergere;
 using Adaugare = PetShop.Forms.Angajati.Adaugare;
 using Modificare = PetShop.Forms.Angajati.Modificare;
+using PetShop.Forms.Animale;
 
 namespace PetShop.Forms
 {
@@ -27,15 +28,12 @@ namespace PetShop.Forms
             InitializeComponent();
             dbContext = new DBContext();
             var user = dbContext.Users.FirstOrDefault(x => x.Power == 0);
-            if (user == null)
+            if (user != null)
             {
                 button_modifica.Enabled = false;
                 button_refresh.Enabled = false;
                 button_stergere.Enabled = false;
                 button_adauga.Enabled = false;
-                comboBox1.Enabled = false;
-                numericUpDown_id.Enabled = false;
-                button1.Enabled = false;
             }
             GetAll();
 
@@ -199,6 +197,13 @@ namespace PetShop.Forms
             { 
                 MessageBox.Show("Ati introdus un id inexistent");
             }
+        }
+
+        private void button_view_animale_Click(object sender, EventArgs e)
+        {
+            AnimaleForm form = new AnimaleForm() { };
+            form.Show();
+            this.Close();
         }
     }
 }

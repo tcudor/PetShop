@@ -18,6 +18,7 @@ namespace PetShop.Forms.Clienti
         {
             InitializeComponent();
             dbContext = new DBContext();
+            button_modifica.Enabled = false;
         }
 
         private void button_modifica_Click(object sender, EventArgs e)
@@ -31,8 +32,8 @@ namespace PetShop.Forms.Clienti
             Client.Telefon = textBox_telefon.Text;
             Client.Email = textBox_email.Text;
             Client.Adresa = textBox_adresa.Text;
-            Client.Sex = textBox_sex.Text;
-            Client.DataNastere = dateTimePicker_dataN.Value;
+            Client.Sex = comboBox_sex.Text;
+            Client.DataNastere = dateTimePicker_dataN.Value.Date;
 
             dbContext.Clienti.Update(Client);
             dbContext.SaveChanges();
@@ -42,22 +43,20 @@ namespace PetShop.Forms.Clienti
         private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
-            int copie = id;
             var Client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
             try
             {
 
                 if (Client != null)
                 {
-                    button_modifica.Enabled = false;
                     textBox_nume.Text = Client.Nume;
                     textBox_prenume.Text = Client.Prenume;
                     textBox_adresa.Text = Client.Adresa;
                     textBox_telefon.Text = Client.Telefon;
                     textBox_email.Text = Client.Email;
-                    textBox_sex.Text = Client.Sex;
+                    comboBox_sex.Text = Client.Sex;
                     dateTimePicker_dataN.Value = Client.DataNastere;
-                    copie = id;
+                    button_modifica.Enabled = true;
 
                 }
                 else

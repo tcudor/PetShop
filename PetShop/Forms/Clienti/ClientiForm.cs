@@ -27,9 +27,6 @@ namespace PetShop.Forms.Clienti
                 button_refresh.Enabled = false;
                 button_stergere.Enabled = false;
                 button_adauga.Enabled = false;
-                comboBox1.Enabled = false;
-                numericUpDown_id.Enabled = false;
-                button1.Enabled = false;
             }
             GetAll();
         }

@@ -1,4 +1,5 @@
 ﻿using PetShop.Data;
+using PetShop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +19,19 @@ namespace PetShop.Forms.Clienti
         {
             InitializeComponent();
             dbContext = new DBContext();
+            button_stergere.Enabled = false;
         }
 
         private void button_stergere_Click(object sender, EventArgs e)
+        {
+            int id = (int)numericUpDown_id.Value;
+            var Client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
+            dbContext.Clienti.Remove(Client);
+            dbContext.SaveChanges();
+            this.Close();
+        }
+
+        private void numericUpDown_id_ValueChanged(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
             try
@@ -28,12 +39,7 @@ namespace PetShop.Forms.Clienti
                 var Client = dbContext.Clienti.FirstOrDefault(x => x.IdClient == id);
                 if (Client != null)
                 {
-                    button_stergere.Enabled = true;
-                    dbContext.Clienti.Remove(Client);
-                    dbContext.SaveChanges();
-                    ClientiForm form = new ClientiForm() { };
-                    form.Show();
-                    this.Close();
+                    button_stergere.Enabled = true;                    
                 }
                 else
                 {
