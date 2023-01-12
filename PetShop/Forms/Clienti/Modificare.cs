@@ -1,4 +1,6 @@
-﻿using PetShop.Data;
+﻿using FluentValidation.Results;
+using PetShop.Data;
+using PetShop.Validator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,10 +36,26 @@ namespace PetShop.Forms.Clienti
             Client.Adresa = textBox_adresa.Text;
             Client.Sex = comboBox_sex.Text;
             Client.DataNastere = dateTimePicker_dataN.Value.Date;
+            if (Client != null)
+            {
 
-            dbContext.Clienti.Update(Client);
-            dbContext.SaveChanges();
-            this.Close();
+                ClientValidator Validator = new ClientValidator();
+                ValidationResult results = Validator.Validate(Client);
+                IList<ValidationFailure> failures = results.Errors;
+                if (!results.IsValid)
+                {
+                    foreach (ValidationFailure failure in failures)
+                    {
+                        MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    dbContext.Clienti.Update(Client);
+                    dbContext.SaveChanges();
+                    this.Close();
+                }
+            }
         }
 
         private void numericUpDown_id_ValueChanged(object sender, EventArgs e)

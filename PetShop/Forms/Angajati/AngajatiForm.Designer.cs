@@ -71,9 +71,9 @@
             this.side_panel.Controls.Add(this.button_view_angajati);
             this.side_panel.Controls.Add(this.button_view_animale);
             this.side_panel.Controls.Add(this.button_home);
-            this.side_panel.Location = new System.Drawing.Point(2, -3);
+            this.side_panel.Location = new System.Drawing.Point(0, -3);
             this.side_panel.Name = "side_panel";
-            this.side_panel.Size = new System.Drawing.Size(131, 883);
+            this.side_panel.Size = new System.Drawing.Size(133, 883);
             this.side_panel.TabIndex = 2;
             // 
             // button_view_clienti

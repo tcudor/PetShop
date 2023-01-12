@@ -13,7 +13,6 @@ namespace PetShop.Models
         public int IdAngajat { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
-        public string Functie { get; set; }
         public string Email { get; set; }
         public string Adresa { get; set; }
         public string Telefon { get; set; }

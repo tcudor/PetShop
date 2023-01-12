@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FluentValidation;
+using FluentValidation.Results;
+using Microsoft.EntityFrameworkCore;
 using PetShop.Data;
 using PetShop.Forms.Clienti;
 using PetShop.Models;
+using PetShop.Validator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,11 +41,26 @@ namespace PetShop.Forms.Angajati
                 DataAngajare = dateTimePicker_dataA.Value,
                 DataNastere=dateTimePicker_dataN.Value.Date
             };
-            dbContext.Angajati.Add(Angajat);
-            dbContext.SaveChanges();
-            AngajatiForm form = new AngajatiForm() { };
-            form.Show();
-            this.Close();
+            if (Angajat != null)
+            {
+
+                AngajatValidator Validator = new AngajatValidator();
+                ValidationResult results = Validator.Validate(Angajat);
+                IList<ValidationFailure> failures = results.Errors;
+                if (!results.IsValid)
+                {
+                    foreach (ValidationFailure failure in failures)
+                    {
+                        MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    dbContext.Angajati.Add(Angajat);
+                    dbContext.SaveChanges();
+                    this.Close();
+                }
+            }
         }
     }
 }

@@ -19,7 +19,6 @@ namespace PetShop.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nume = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Prenume = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Functie = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Adresa = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Telefon = table.Column<string>(type: "nvarchar(max)", nullable: false),

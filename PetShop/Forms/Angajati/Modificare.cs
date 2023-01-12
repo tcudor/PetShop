@@ -1,8 +1,10 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using FluentValidation.Results;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using PetShop.Data;
 using PetShop.Forms.Clienti;
 using PetShop.Models;
+using PetShop.Validator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,12 +48,26 @@ namespace PetShop.Forms.Angajati
             Angajat.Sex = comboBox_sex.Text;
             Angajat.DataAngajare = dateTimePicker_dataA.Value;
             Angajat.DataNastere = dateTimePicker_dataN.Value.Date;
-           
-            dbContext.Angajati.Update(Angajat);
-            dbContext.SaveChanges();
-            AngajatiForm form = new AngajatiForm() { };
-            form.Show();
-            this.Close();
+            if (Angajat != null)
+            {
+
+                AngajatValidator Validator = new AngajatValidator();
+                ValidationResult results = Validator.Validate(Angajat);
+                IList<ValidationFailure> failures = results.Errors;
+                if (!results.IsValid)
+                {
+                    foreach (ValidationFailure failure in failures)
+                    {
+                        MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    dbContext.Angajati.Update(Angajat);
+                    dbContext.SaveChanges();
+                    this.Close();
+                }
+            }
 
         }
     

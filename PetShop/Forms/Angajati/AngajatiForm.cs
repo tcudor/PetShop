@@ -27,8 +27,8 @@ namespace PetShop.Forms
         {
             InitializeComponent();
             dbContext = new DBContext();
-            var user = dbContext.Users.FirstOrDefault(x => x.Power == 0);
-            if (user != null)
+            var user = dbContext.Users.FirstOrDefault(x => x.Power >= 1);
+            if (user == null)
             {
                 button_modifica.Enabled = false;
                 button_refresh.Enabled = false;
@@ -73,9 +73,8 @@ namespace PetShop.Forms
 
         private void button_stergere_Click(object sender, EventArgs e)
         {
-            AngajatiForm form = new AngajatiForm() { };
+            Stergere form = new Stergere() { };
             form.Show();
-            this.Close();
         }
 
         private void button_view_angajati_Click(object sender, EventArgs e)

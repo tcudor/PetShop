@@ -1,5 +1,7 @@
-﻿using PetShop.Data;
+﻿using FluentValidation.Results;
+using PetShop.Data;
 using PetShop.Models;
+using PetShop.Validator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,9 +36,26 @@ namespace PetShop.Forms.Animale
                 Sex = comboBox_sex.Text,
                 DataNastere = dateTimePicker_dataN.Value.Date
             };
-            dbContext.Animale.Add(Animal);
-            dbContext.SaveChanges();
-            this.Close();
+            if (Animal != null)
+            {
+
+                AnimalValidator Validator = new AnimalValidator();
+                ValidationResult results = Validator.Validate(Animal);
+                IList<ValidationFailure> failures = results.Errors;
+                if (!results.IsValid)
+                {
+                    foreach (ValidationFailure failure in failures)
+                    {
+                        MessageBox.Show(failure.ErrorMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    dbContext.Animale.Add(Animal);
+                    dbContext.SaveChanges();
+                    this.Close();
+                }
+            }
         }
 
         private void numericUpDown_id_ValueChanged(object sender, EventArgs e)

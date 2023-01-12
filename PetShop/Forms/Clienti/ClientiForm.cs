@@ -20,7 +20,7 @@ namespace PetShop.Forms.Clienti
         {
             InitializeComponent();
             dbContext = new DBContext();
-            var user = dbContext.Users.FirstOrDefault(x => x.Power == 0);
+            var user = dbContext.Users.FirstOrDefault(x => x.Power >= 1);
             if (user == null)
             {
                 button_modifica.Enabled = false;
