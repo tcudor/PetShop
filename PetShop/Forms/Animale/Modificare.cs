@@ -31,7 +31,7 @@ namespace PetShop.Forms.Animale
             int id = (int)numericUpDown_id.Value;
             var Animal = dbContext.Animale.FirstOrDefault(x => x.IdAnimal == id);
 
-            Animal.Categorie=textBox_categorie.Text;
+            Animal.Categorie= comboBox_categorie.Text;
             Animal.Rasa = textBox_rasa.Text;
             Animal.Descriere = textBox_descriere.Text;
             Animal.IdCumparator = (int)numericUpDown_idcumparator.Value;
@@ -70,7 +70,7 @@ namespace PetShop.Forms.Animale
                 {
                     textBox_rasa.Text = Animal.Rasa;
                     textBox_descriere.Text = Animal.Descriere;
-                    textBox_categorie.Text = Animal.Categorie;
+                    comboBox_categorie.Text = Animal.Categorie;
                     numericUpDown_idcumparator.Value = Animal.IdCumparator;
                     comboBox_sex.Text = Animal.Sex;
                     dateTimePicker_dataN.Value = Animal.DataNastere;

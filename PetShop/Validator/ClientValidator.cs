@@ -18,9 +18,9 @@ namespace PetShop.Validator
                 {
                     context.AddFailure("Numele trebuie sa contina minim 2 caractere");
                 }
-                if (list.Any(char.IsDigit))
+                if (list.All(char.IsLetter))
                 {
-                    context.AddFailure("Numele nu trebuie sa contina cifre");
+                    context.AddFailure("Numele trebuie sa contine doar litere");
                 }
             });
             RuleFor(x => x.Prenume).Cascade(CascadeMode.Stop).Custom((list, context) =>
@@ -29,9 +29,9 @@ namespace PetShop.Validator
                 {
                     context.AddFailure("Prenumele trebuie sa contina minim 2 caractere");
                 }
-                if (list.Any(char.IsDigit))
+                if (list.All(char.IsLetter))
                 {
-                    context.AddFailure("Prenumele nu trebuie sa contina cifre");
+                    context.AddFailure("Prenumele trebuie sa contine doar litere");
                 }
             });
             RuleFor(x => x.Adresa).Cascade(CascadeMode.Stop).Custom((list, context) =>
@@ -51,9 +51,9 @@ namespace PetShop.Validator
                 {
                     context.AddFailure("Numarul de Telefon trebuie sa contina 10 caractere");
                 }
-                if (list.Any(char.IsLetter))
+                if (!list.All(char.IsDigit))
                 {
-                    context.AddFailure("Numarul de Telefon nu trebuie sa contina litere");
+                    context.AddFailure("Numarul de Telefon trebuie sa contina doar cifre ");
                 }
             });
             RuleFor(x => x.Email).EmailAddress().WithMessage("Introduceti o adresa de email valida");

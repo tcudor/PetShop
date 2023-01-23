@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button_exit = new System.Windows.Forms.Button();
             this.button_stergere = new System.Windows.Forms.Button();
             this.button_modifica = new System.Windows.Forms.Button();
@@ -63,11 +63,12 @@
             this.button_exit.BackColor = System.Drawing.Color.MidnightBlue;
             this.button_exit.FlatAppearance.BorderSize = 0;
             this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_exit.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_exit.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_exit.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_exit.Location = new System.Drawing.Point(0, 381);
+            this.button_exit.Location = new System.Drawing.Point(0, 516);
+            this.button_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(129, 70);
+            this.button_exit.Size = new System.Drawing.Size(113, 52);
             this.button_exit.TabIndex = 3;
             this.button_exit.Text = "Iesire";
             this.button_exit.UseVisualStyleBackColor = false;
@@ -80,11 +81,10 @@
             this.button_stergere.Dock = System.Windows.Forms.DockStyle.Right;
             this.button_stergere.FlatAppearance.BorderSize = 0;
             this.button_stergere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_stergere.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_stergere.Location = new System.Drawing.Point(1405, 0);
-            this.button_stergere.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_stergere.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_stergere.Location = new System.Drawing.Point(1229, 0);
             this.button_stergere.Name = "button_stergere";
-            this.button_stergere.Size = new System.Drawing.Size(160, 95);
+            this.button_stergere.Size = new System.Drawing.Size(140, 71);
             this.button_stergere.TabIndex = 12;
             this.button_stergere.Text = "Stergere Client";
             this.button_stergere.UseVisualStyleBackColor = false;
@@ -97,11 +97,10 @@
             this.button_modifica.Dock = System.Windows.Forms.DockStyle.Right;
             this.button_modifica.FlatAppearance.BorderSize = 0;
             this.button_modifica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_modifica.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_modifica.Location = new System.Drawing.Point(1216, 0);
-            this.button_modifica.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_modifica.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_modifica.Location = new System.Drawing.Point(1064, 0);
             this.button_modifica.Name = "button_modifica";
-            this.button_modifica.Size = new System.Drawing.Size(189, 95);
+            this.button_modifica.Size = new System.Drawing.Size(165, 71);
             this.button_modifica.TabIndex = 11;
             this.button_modifica.Text = "Modificare Client";
             this.button_modifica.UseVisualStyleBackColor = false;
@@ -114,11 +113,10 @@
             this.button_adauga.Dock = System.Windows.Forms.DockStyle.Right;
             this.button_adauga.FlatAppearance.BorderSize = 0;
             this.button_adauga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_adauga.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_adauga.Location = new System.Drawing.Point(1042, 0);
-            this.button_adauga.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_adauga.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_adauga.Location = new System.Drawing.Point(912, 0);
             this.button_adauga.Name = "button_adauga";
-            this.button_adauga.Size = new System.Drawing.Size(174, 95);
+            this.button_adauga.Size = new System.Drawing.Size(152, 71);
             this.button_adauga.TabIndex = 10;
             this.button_adauga.Text = "Adaugare Client";
             this.button_adauga.UseVisualStyleBackColor = false;
@@ -135,26 +133,31 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.No;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.Crimson;
-            this.dataGridView1.Location = new System.Drawing.Point(128, 94);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(112, 70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowHeadersWidth = 50;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.Size = new System.Drawing.Size(1437, 799);
+            this.dataGridView1.RowTemplate.Height = 65;
+            this.dataGridView1.Size = new System.Drawing.Size(1257, 599);
             this.dataGridView1.TabIndex = 7;
             // 
             // clientBindingSource
@@ -173,8 +176,9 @@
             this.side_panel.Controls.Add(this.button_view_animale);
             this.side_panel.Controls.Add(this.button_home);
             this.side_panel.Location = new System.Drawing.Point(0, 0);
+            this.side_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.side_panel.Name = "side_panel";
-            this.side_panel.Size = new System.Drawing.Size(138, 975);
+            this.side_panel.Size = new System.Drawing.Size(121, 731);
             this.side_panel.TabIndex = 8;
             // 
             // button_view_clienti
@@ -182,11 +186,12 @@
             this.button_view_clienti.BackColor = System.Drawing.Color.MidnightBlue;
             this.button_view_clienti.FlatAppearance.BorderSize = 0;
             this.button_view_clienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_view_clienti.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_view_clienti.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_view_clienti.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_view_clienti.Location = new System.Drawing.Point(0, 311);
+            this.button_view_clienti.Location = new System.Drawing.Point(0, 406);
+            this.button_view_clienti.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_view_clienti.Name = "button_view_clienti";
-            this.button_view_clienti.Size = new System.Drawing.Size(129, 70);
+            this.button_view_clienti.Size = new System.Drawing.Size(113, 52);
             this.button_view_clienti.TabIndex = 4;
             this.button_view_clienti.Text = "Vizualizare Clienti";
             this.button_view_clienti.UseVisualStyleBackColor = false;
@@ -197,11 +202,12 @@
             this.button_view_angajati.BackColor = System.Drawing.Color.MidnightBlue;
             this.button_view_angajati.FlatAppearance.BorderSize = 0;
             this.button_view_angajati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_view_angajati.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_view_angajati.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_view_angajati.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_view_angajati.Location = new System.Drawing.Point(0, 241);
+            this.button_view_angajati.Location = new System.Drawing.Point(0, 296);
+            this.button_view_angajati.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_view_angajati.Name = "button_view_angajati";
-            this.button_view_angajati.Size = new System.Drawing.Size(129, 70);
+            this.button_view_angajati.Size = new System.Drawing.Size(113, 52);
             this.button_view_angajati.TabIndex = 2;
             this.button_view_angajati.Text = "Vizualizare Angajati";
             this.button_view_angajati.UseVisualStyleBackColor = false;
@@ -212,11 +218,12 @@
             this.button_view_animale.BackColor = System.Drawing.Color.MidnightBlue;
             this.button_view_animale.FlatAppearance.BorderSize = 0;
             this.button_view_animale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_view_animale.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_view_animale.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_view_animale.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_view_animale.Location = new System.Drawing.Point(3, 171);
+            this.button_view_animale.Location = new System.Drawing.Point(0, 186);
+            this.button_view_animale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_view_animale.Name = "button_view_animale";
-            this.button_view_animale.Size = new System.Drawing.Size(129, 70);
+            this.button_view_animale.Size = new System.Drawing.Size(113, 52);
             this.button_view_animale.TabIndex = 1;
             this.button_view_animale.Text = "Vizualizare Animale";
             this.button_view_animale.UseVisualStyleBackColor = false;
@@ -227,11 +234,12 @@
             this.button_home.BackColor = System.Drawing.Color.MidnightBlue;
             this.button_home.FlatAppearance.BorderSize = 0;
             this.button_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_home.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_home.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_home.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_home.Location = new System.Drawing.Point(0, 101);
+            this.button_home.Location = new System.Drawing.Point(0, 76);
+            this.button_home.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_home.Name = "button_home";
-            this.button_home.Size = new System.Drawing.Size(129, 70);
+            this.button_home.Size = new System.Drawing.Size(113, 52);
             this.button_home.TabIndex = 0;
             this.button_home.Text = "Acasa";
             this.button_home.UseVisualStyleBackColor = false;
@@ -252,8 +260,9 @@
             this.panel_up.Controls.Add(this.button_stergere);
             this.panel_up.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_up.Location = new System.Drawing.Point(0, 0);
+            this.panel_up.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_up.Name = "panel_up";
-            this.panel_up.Size = new System.Drawing.Size(1565, 95);
+            this.panel_up.Size = new System.Drawing.Size(1369, 71);
             this.panel_up.TabIndex = 14;
             // 
             // button_refresh
@@ -262,11 +271,10 @@
             this.button_refresh.Dock = System.Windows.Forms.DockStyle.Right;
             this.button_refresh.FlatAppearance.BorderSize = 0;
             this.button_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_refresh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_refresh.Location = new System.Drawing.Point(860, 0);
-            this.button_refresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_refresh.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_refresh.Location = new System.Drawing.Point(753, 0);
             this.button_refresh.Name = "button_refresh";
-            this.button_refresh.Size = new System.Drawing.Size(182, 95);
+            this.button_refresh.Size = new System.Drawing.Size(159, 71);
             this.button_refresh.TabIndex = 24;
             this.button_refresh.Text = "Refresh";
             this.button_refresh.UseVisualStyleBackColor = true;
@@ -274,9 +282,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(481, 54);
+            this.button1.Location = new System.Drawing.Point(421, 40);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(82, 22);
             this.button1.TabIndex = 23;
             this.button1.Text = "Aplica";
             this.button1.UseVisualStyleBackColor = true;
@@ -286,15 +295,17 @@
             // 
             this.pictureBox1.Image = global::PetShop.Properties.Resources.download;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(114, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
             // numericUpDown_id
             // 
-            this.numericUpDown_id.Location = new System.Drawing.Point(311, 56);
+            this.numericUpDown_id.Location = new System.Drawing.Point(272, 42);
+            this.numericUpDown_id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown_id.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -306,7 +317,7 @@
             0,
             0});
             this.numericUpDown_id.Name = "numericUpDown_id";
-            this.numericUpDown_id.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDown_id.Size = new System.Drawing.Size(131, 23);
             this.numericUpDown_id.TabIndex = 21;
             this.numericUpDown_id.Value = new decimal(new int[] {
             1,
@@ -318,10 +329,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(128, 51);
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(117, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 28);
+            this.label2.Size = new System.Drawing.Size(126, 18);
             this.label2.TabIndex = 15;
             this.label2.Text = "Cauta dupa id :";
             // 
@@ -336,30 +347,32 @@
             "Adresa",
             "Telefon",
             "Dana nastere"});
-            this.comboBox1.Location = new System.Drawing.Point(310, 4);
+            this.comboBox1.Location = new System.Drawing.Point(271, 3);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.Size = new System.Drawing.Size(133, 23);
             this.comboBox1.TabIndex = 15;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(128, 0);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(117, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 28);
+            this.label1.Size = new System.Drawing.Size(134, 18);
             this.label1.TabIndex = 14;
             this.label1.Text = "Sorteaza dupa :";
             // 
             // ClientiForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1565, 892);
+            this.ClientSize = new System.Drawing.Size(1369, 669);
             this.Controls.Add(this.panel_up);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.side_panel);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClientiForm";
             this.Text = "ClientiForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

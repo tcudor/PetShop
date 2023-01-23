@@ -73,8 +73,9 @@ namespace PetShop.Forms
 
         private void button_stergere_Click(object sender, EventArgs e)
         {
-            Stergere form = new Stergere() { };
+            AngajatiForm form = new AngajatiForm() { };
             form.Show();
+            this.Close();
         }
 
         private void button_view_angajati_Click(object sender, EventArgs e)

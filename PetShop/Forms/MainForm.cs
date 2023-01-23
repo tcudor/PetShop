@@ -19,6 +19,10 @@ namespace PetShop
             {
                 button_adduser.Visible = false;
             }
+            else
+            {
+                button_adduser.Visible = true;
+            }
         }
 
         private void button_view_angajati_Click(object sender, EventArgs e)

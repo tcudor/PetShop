@@ -29,7 +29,7 @@ namespace PetShop.Forms.Animale
         {
             var Animal = new Animal()
             {
-                Categorie=textBox_categorie.Text,
+                Categorie=  comboBox_categorie.Text,
                 Rasa = textBox_rasa.Text,
                 Descriere = textBox_descriere.Text,
                 IdCumparator = (int)numericUpDown_id.Value,

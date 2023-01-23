@@ -63,7 +63,9 @@ namespace PetShop.Forms.Clienti
 
         private void button_refresh_Click(object sender, EventArgs e)
         {
-            GetAll();
+            ClientiForm form = new ClientiForm() { };
+            form.Show();
+            this.Close();
         }
 
         private void button_stergere_Click(object sender, EventArgs e)
