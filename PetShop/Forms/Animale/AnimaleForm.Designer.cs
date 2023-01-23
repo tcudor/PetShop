@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel_up = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox_ID = new System.Windows.Forms.ComboBox();
             this.button_refresh = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,13 +41,6 @@
             this.button_adauga = new System.Windows.Forms.Button();
             this.button_modifica = new System.Windows.Forms.Button();
             this.button_stergere = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.side_panel = new System.Windows.Forms.Panel();
-            this.button_view_clienti = new System.Windows.Forms.Button();
-            this.button_exit = new System.Windows.Forms.Button();
-            this.button_view_angajati = new System.Windows.Forms.Button();
-            this.button_view_animale = new System.Windows.Forms.Button();
-            this.button_home = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idAnimalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categorieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,17 +50,24 @@
             this.dataNastereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCumparatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.side_panel = new System.Windows.Forms.Panel();
+            this.button_view_clienti = new System.Windows.Forms.Button();
+            this.button_exit = new System.Windows.Forms.Button();
+            this.button_view_angajati = new System.Windows.Forms.Button();
+            this.button_view_animale = new System.Windows.Forms.Button();
+            this.button_home = new System.Windows.Forms.Button();
             this.panel_up.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.side_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
+            this.side_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_up
             // 
             this.panel_up.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel_up.Controls.Add(this.pictureBox1);
             this.panel_up.Controls.Add(this.comboBox_ID);
             this.panel_up.Controls.Add(this.button_refresh);
             this.panel_up.Controls.Add(this.button1);
@@ -82,6 +83,16 @@
             this.panel_up.Name = "panel_up";
             this.panel_up.Size = new System.Drawing.Size(1447, 95);
             this.panel_up.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PetShop.Properties.Resources.download;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // comboBox_ID
             // 
@@ -231,108 +242,6 @@
             this.button_stergere.UseVisualStyleBackColor = false;
             this.button_stergere.Click += new System.EventHandler(this.button_stergere_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PetShop.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 88);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 92);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            // 
-            // side_panel
-            // 
-            this.side_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.side_panel.AutoSize = true;
-            this.side_panel.BackColor = System.Drawing.Color.MidnightBlue;
-            this.side_panel.Controls.Add(this.button_view_clienti);
-            this.side_panel.Controls.Add(this.button_exit);
-            this.side_panel.Controls.Add(this.pictureBox1);
-            this.side_panel.Controls.Add(this.button_view_angajati);
-            this.side_panel.Controls.Add(this.button_view_animale);
-            this.side_panel.Controls.Add(this.button_home);
-            this.side_panel.Location = new System.Drawing.Point(0, -88);
-            this.side_panel.Name = "side_panel";
-            this.side_panel.Size = new System.Drawing.Size(132, 975);
-            this.side_panel.TabIndex = 15;
-            // 
-            // button_view_clienti
-            // 
-            this.button_view_clienti.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button_view_clienti.FlatAppearance.BorderSize = 0;
-            this.button_view_clienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_view_clienti.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_view_clienti.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_view_clienti.Location = new System.Drawing.Point(3, 344);
-            this.button_view_clienti.Name = "button_view_clienti";
-            this.button_view_clienti.Size = new System.Drawing.Size(119, 53);
-            this.button_view_clienti.TabIndex = 4;
-            this.button_view_clienti.Text = "Vizualizare Clienti";
-            this.button_view_clienti.UseVisualStyleBackColor = false;
-            this.button_view_clienti.Click += new System.EventHandler(this.button_view_clienti_Click);
-            // 
-            // button_exit
-            // 
-            this.button_exit.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button_exit.FlatAppearance.BorderSize = 0;
-            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_exit.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_exit.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_exit.Location = new System.Drawing.Point(3, 397);
-            this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(119, 53);
-            this.button_exit.TabIndex = 3;
-            this.button_exit.Text = "Iesire";
-            this.button_exit.UseVisualStyleBackColor = false;
-            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
-            // 
-            // button_view_angajati
-            // 
-            this.button_view_angajati.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button_view_angajati.FlatAppearance.BorderSize = 0;
-            this.button_view_angajati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_view_angajati.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_view_angajati.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_view_angajati.Location = new System.Drawing.Point(3, 291);
-            this.button_view_angajati.Name = "button_view_angajati";
-            this.button_view_angajati.Size = new System.Drawing.Size(119, 53);
-            this.button_view_angajati.TabIndex = 2;
-            this.button_view_angajati.Text = "Vizualizare Angajati";
-            this.button_view_angajati.UseVisualStyleBackColor = false;
-            this.button_view_angajati.Click += new System.EventHandler(this.button_view_angajati_Click);
-            // 
-            // button_view_animale
-            // 
-            this.button_view_animale.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button_view_animale.FlatAppearance.BorderSize = 0;
-            this.button_view_animale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_view_animale.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_view_animale.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_view_animale.Location = new System.Drawing.Point(3, 237);
-            this.button_view_animale.Name = "button_view_animale";
-            this.button_view_animale.Size = new System.Drawing.Size(119, 53);
-            this.button_view_animale.TabIndex = 1;
-            this.button_view_animale.Text = "Vizualizare Animale";
-            this.button_view_animale.UseVisualStyleBackColor = false;
-            this.button_view_animale.Click += new System.EventHandler(this.button_view_animale_Click);
-            // 
-            // button_home
-            // 
-            this.button_home.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button_home.FlatAppearance.BorderSize = 0;
-            this.button_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_home.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_home.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button_home.Location = new System.Drawing.Point(3, 185);
-            this.button_home.Name = "button_home";
-            this.button_home.Size = new System.Drawing.Size(119, 52);
-            this.button_home.TabIndex = 0;
-            this.button_home.Text = "Acasa";
-            this.button_home.UseVisualStyleBackColor = false;
-            this.button_home.Click += new System.EventHandler(this.button_home_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -355,13 +264,13 @@
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.No;
             this.dataGridView1.DataSource = this.animalBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.Crimson;
-            this.dataGridView1.Location = new System.Drawing.Point(129, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(128, 94);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 50;
             this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.Size = new System.Drawing.Size(1318, 709);
+            this.dataGridView1.Size = new System.Drawing.Size(1318, 713);
             this.dataGridView1.TabIndex = 17;
             // 
             // idAnimalDataGridViewTextBoxColumn
@@ -424,24 +333,110 @@
             // 
             this.animalBindingSource.DataSource = typeof(PetShop.Models.Animal);
             // 
+            // side_panel
+            // 
+            this.side_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.side_panel.AutoSize = true;
+            this.side_panel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.side_panel.Controls.Add(this.button_view_clienti);
+            this.side_panel.Controls.Add(this.button_exit);
+            this.side_panel.Controls.Add(this.button_view_angajati);
+            this.side_panel.Controls.Add(this.button_view_animale);
+            this.side_panel.Controls.Add(this.button_home);
+            this.side_panel.Location = new System.Drawing.Point(0, 0);
+            this.side_panel.Name = "side_panel";
+            this.side_panel.Size = new System.Drawing.Size(138, 975);
+            this.side_panel.TabIndex = 18;
+            // 
+            // button_view_clienti
+            // 
+            this.button_view_clienti.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_view_clienti.FlatAppearance.BorderSize = 0;
+            this.button_view_clienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_view_clienti.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_view_clienti.Location = new System.Drawing.Point(0, 311);
+            this.button_view_clienti.Name = "button_view_clienti";
+            this.button_view_clienti.Size = new System.Drawing.Size(129, 70);
+            this.button_view_clienti.TabIndex = 4;
+            this.button_view_clienti.Text = "Vizualizare Clienti";
+            this.button_view_clienti.UseVisualStyleBackColor = false;
+            this.button_view_clienti.Click += new System.EventHandler(this.button_view_clienti_Click_1);
+            // 
+            // button_exit
+            // 
+            this.button_exit.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_exit.FlatAppearance.BorderSize = 0;
+            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_exit.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_exit.Location = new System.Drawing.Point(0, 381);
+            this.button_exit.Name = "button_exit";
+            this.button_exit.Size = new System.Drawing.Size(129, 70);
+            this.button_exit.TabIndex = 3;
+            this.button_exit.Text = "Iesire";
+            this.button_exit.UseVisualStyleBackColor = false;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click_1);
+            // 
+            // button_view_angajati
+            // 
+            this.button_view_angajati.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_view_angajati.FlatAppearance.BorderSize = 0;
+            this.button_view_angajati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_view_angajati.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_view_angajati.Location = new System.Drawing.Point(0, 241);
+            this.button_view_angajati.Name = "button_view_angajati";
+            this.button_view_angajati.Size = new System.Drawing.Size(129, 70);
+            this.button_view_angajati.TabIndex = 2;
+            this.button_view_angajati.Text = "Vizualizare Angajati";
+            this.button_view_angajati.UseVisualStyleBackColor = false;
+            this.button_view_angajati.Click += new System.EventHandler(this.button_view_angajati_Click_1);
+            // 
+            // button_view_animale
+            // 
+            this.button_view_animale.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_view_animale.FlatAppearance.BorderSize = 0;
+            this.button_view_animale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_view_animale.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_view_animale.Location = new System.Drawing.Point(0, 171);
+            this.button_view_animale.Name = "button_view_animale";
+            this.button_view_animale.Size = new System.Drawing.Size(129, 70);
+            this.button_view_animale.TabIndex = 1;
+            this.button_view_animale.Text = "Vizualizare Animale";
+            this.button_view_animale.UseVisualStyleBackColor = false;
+            this.button_view_animale.Click += new System.EventHandler(this.button_view_animale_Click_1);
+            // 
+            // button_home
+            // 
+            this.button_home.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_home.FlatAppearance.BorderSize = 0;
+            this.button_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_home.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_home.Location = new System.Drawing.Point(0, 101);
+            this.button_home.Name = "button_home";
+            this.button_home.Size = new System.Drawing.Size(129, 70);
+            this.button_home.TabIndex = 0;
+            this.button_home.Text = "Acasa";
+            this.button_home.UseVisualStyleBackColor = false;
+            this.button_home.Click += new System.EventHandler(this.button_home_Click_1);
+            // 
             // AnimaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1447, 798);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.side_panel);
             this.Controls.Add(this.panel_up);
+            this.Controls.Add(this.side_panel);
             this.Name = "AnimaleForm";
             this.Text = "AnimaleForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel_up.ResumeLayout(false);
             this.panel_up.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.side_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
+            this.side_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

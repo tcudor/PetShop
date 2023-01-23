@@ -55,7 +55,7 @@
             this.side_panel.Controls.Add(this.button_home);
             this.side_panel.Location = new System.Drawing.Point(0, 0);
             this.side_panel.Name = "side_panel";
-            this.side_panel.Size = new System.Drawing.Size(131, 811);
+            this.side_panel.Size = new System.Drawing.Size(135, 811);
             this.side_panel.TabIndex = 1;
             // 
             // button_adduser
@@ -66,7 +66,7 @@
             this.button_adduser.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_adduser.Location = new System.Drawing.Point(3, 488);
             this.button_adduser.Name = "button_adduser";
-            this.button_adduser.Size = new System.Drawing.Size(119, 52);
+            this.button_adduser.Size = new System.Drawing.Size(129, 70);
             this.button_adduser.TabIndex = 5;
             this.button_adduser.Text = "Adaugare User";
             this.button_adduser.UseVisualStyleBackColor = false;
@@ -78,9 +78,9 @@
             this.button_view_clienti.FlatAppearance.BorderSize = 0;
             this.button_view_clienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_view_clienti.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_view_clienti.Location = new System.Drawing.Point(0, 260);
+            this.button_view_clienti.Location = new System.Drawing.Point(0, 311);
             this.button_view_clienti.Name = "button_view_clienti";
-            this.button_view_clienti.Size = new System.Drawing.Size(119, 53);
+            this.button_view_clienti.Size = new System.Drawing.Size(129, 70);
             this.button_view_clienti.TabIndex = 4;
             this.button_view_clienti.Text = "Vizualizare Clienti";
             this.button_view_clienti.UseVisualStyleBackColor = false;
@@ -92,9 +92,9 @@
             this.button_exit.FlatAppearance.BorderSize = 0;
             this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_exit.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_exit.Location = new System.Drawing.Point(0, 313);
+            this.button_exit.Location = new System.Drawing.Point(1, 381);
             this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(119, 53);
+            this.button_exit.Size = new System.Drawing.Size(129, 70);
             this.button_exit.TabIndex = 3;
             this.button_exit.Text = "Iesire";
             this.button_exit.UseVisualStyleBackColor = false;
@@ -106,9 +106,9 @@
             this.button_view_angajati.FlatAppearance.BorderSize = 0;
             this.button_view_angajati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_view_angajati.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_view_angajati.Location = new System.Drawing.Point(0, 207);
+            this.button_view_angajati.Location = new System.Drawing.Point(0, 241);
             this.button_view_angajati.Name = "button_view_angajati";
-            this.button_view_angajati.Size = new System.Drawing.Size(119, 53);
+            this.button_view_angajati.Size = new System.Drawing.Size(129, 70);
             this.button_view_angajati.TabIndex = 2;
             this.button_view_angajati.Text = "Vizualizare Angajati";
             this.button_view_angajati.UseVisualStyleBackColor = false;
@@ -120,9 +120,9 @@
             this.button_view_animale.FlatAppearance.BorderSize = 0;
             this.button_view_animale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_view_animale.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_view_animale.Location = new System.Drawing.Point(0, 153);
+            this.button_view_animale.Location = new System.Drawing.Point(0, 171);
             this.button_view_animale.Name = "button_view_animale";
-            this.button_view_animale.Size = new System.Drawing.Size(119, 53);
+            this.button_view_animale.Size = new System.Drawing.Size(129, 70);
             this.button_view_animale.TabIndex = 1;
             this.button_view_animale.Text = "Vizualizare Animale";
             this.button_view_animale.UseVisualStyleBackColor = false;
@@ -136,7 +136,7 @@
             this.button_home.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_home.Location = new System.Drawing.Point(0, 101);
             this.button_home.Name = "button_home";
-            this.button_home.Size = new System.Drawing.Size(119, 52);
+            this.button_home.Size = new System.Drawing.Size(129, 70);
             this.button_home.TabIndex = 0;
             this.button_home.Text = "Acasa";
             this.button_home.UseVisualStyleBackColor = false;
@@ -171,6 +171,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "PetShop";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.side_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

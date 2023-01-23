@@ -25,10 +25,10 @@ namespace PetShop.Forms.Animale
             var user = dbContext.Users.FirstOrDefault(x => x.Power >= 1);
             if (user == null)
             {
-                button_modifica.Enabled = false;
-                button_refresh.Enabled = false;
-                button_stergere.Enabled = false;
-                button_adauga.Enabled = false;
+                button_modifica.Visible = false;
+                button_refresh.Visible = false;
+                button_stergere.Visible = false;
+                button_adauga.Visible = false;
 
             }
             comboBox_ID.SelectedIndex= 0;
@@ -69,35 +69,35 @@ namespace PetShop.Forms.Animale
             form.Show();
         }
 
-        private void button_home_Click(object sender, EventArgs e)
+        private void button_home_Click_1(object sender, EventArgs e)
         {
             MainForm form = new MainForm() { };
             form.Show();
             this.Close();
         }
 
-        private void button_view_animale_Click(object sender, EventArgs e)
+        private void button_view_animale_Click_1(object sender, EventArgs e)
         {
             AnimaleForm form = new AnimaleForm() { };
             form.Show();
             this.Close();
         }
 
-        private void button_view_angajati_Click(object sender, EventArgs e)
+        private void button_view_angajati_Click_1(object sender, EventArgs e)
         {
             AngajatiForm form = new AngajatiForm() { };
             form.Show();
             this.Close();
         }
 
-        private void button_view_clienti_Click(object sender, EventArgs e)
+        private void button_view_clienti_Click_1(object sender, EventArgs e)
         {
             ClientiForm form = new ClientiForm() { };
             form.Show();
             this.Close();
         }
 
-        private void button_exit_Click(object sender, EventArgs e)
+        private void button_exit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -177,5 +177,6 @@ namespace PetShop.Forms.Animale
             dataGridView1.DataSource = BS;
             dataGridView1.Refresh();
         }
+
     }
 }

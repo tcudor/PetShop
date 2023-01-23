@@ -71,9 +71,9 @@
             this.side_panel.Controls.Add(this.button_view_angajati);
             this.side_panel.Controls.Add(this.button_view_animale);
             this.side_panel.Controls.Add(this.button_home);
-            this.side_panel.Location = new System.Drawing.Point(0, -3);
+            this.side_panel.Location = new System.Drawing.Point(0, 0);
             this.side_panel.Name = "side_panel";
-            this.side_panel.Size = new System.Drawing.Size(133, 883);
+            this.side_panel.Size = new System.Drawing.Size(138, 975);
             this.side_panel.TabIndex = 2;
             // 
             // button_view_clienti
@@ -82,9 +82,9 @@
             this.button_view_clienti.FlatAppearance.BorderSize = 0;
             this.button_view_clienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_view_clienti.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_view_clienti.Location = new System.Drawing.Point(0, 260);
+            this.button_view_clienti.Location = new System.Drawing.Point(0, 311);
             this.button_view_clienti.Name = "button_view_clienti";
-            this.button_view_clienti.Size = new System.Drawing.Size(119, 53);
+            this.button_view_clienti.Size = new System.Drawing.Size(129, 70);
             this.button_view_clienti.TabIndex = 4;
             this.button_view_clienti.Text = "Vizualizare Clienti";
             this.button_view_clienti.UseVisualStyleBackColor = false;
@@ -96,9 +96,9 @@
             this.button_exit.FlatAppearance.BorderSize = 0;
             this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_exit.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_exit.Location = new System.Drawing.Point(0, 313);
+            this.button_exit.Location = new System.Drawing.Point(0, 381);
             this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(119, 53);
+            this.button_exit.Size = new System.Drawing.Size(129, 70);
             this.button_exit.TabIndex = 3;
             this.button_exit.Text = "Iesire";
             this.button_exit.UseVisualStyleBackColor = false;
@@ -110,9 +110,9 @@
             this.button_view_angajati.FlatAppearance.BorderSize = 0;
             this.button_view_angajati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_view_angajati.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_view_angajati.Location = new System.Drawing.Point(0, 207);
+            this.button_view_angajati.Location = new System.Drawing.Point(0, 241);
             this.button_view_angajati.Name = "button_view_angajati";
-            this.button_view_angajati.Size = new System.Drawing.Size(119, 53);
+            this.button_view_angajati.Size = new System.Drawing.Size(129, 70);
             this.button_view_angajati.TabIndex = 2;
             this.button_view_angajati.Text = "Vizualizare Angajati";
             this.button_view_angajati.UseVisualStyleBackColor = false;
@@ -124,9 +124,9 @@
             this.button_view_animale.FlatAppearance.BorderSize = 0;
             this.button_view_animale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_view_animale.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_view_animale.Location = new System.Drawing.Point(0, 153);
+            this.button_view_animale.Location = new System.Drawing.Point(0, 171);
             this.button_view_animale.Name = "button_view_animale";
-            this.button_view_animale.Size = new System.Drawing.Size(119, 53);
+            this.button_view_animale.Size = new System.Drawing.Size(129, 70);
             this.button_view_animale.TabIndex = 1;
             this.button_view_animale.Text = "Vizualizare Animale";
             this.button_view_animale.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@
             this.button_home.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_home.Location = new System.Drawing.Point(0, 101);
             this.button_home.Name = "button_home";
-            this.button_home.Size = new System.Drawing.Size(119, 52);
+            this.button_home.Size = new System.Drawing.Size(129, 70);
             this.button_home.TabIndex = 0;
             this.button_home.Text = "Acasa";
             this.button_home.UseVisualStyleBackColor = false;
@@ -149,12 +149,12 @@
             // panel_up
             // 
             this.panel_up.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel_up.Controls.Add(this.pictureBox1);
             this.panel_up.Controls.Add(this.button1);
             this.panel_up.Controls.Add(this.numericUpDown_id);
             this.panel_up.Controls.Add(this.label2);
             this.panel_up.Controls.Add(this.comboBox1);
             this.panel_up.Controls.Add(this.label1);
-            this.panel_up.Controls.Add(this.pictureBox1);
             this.panel_up.Controls.Add(this.button_refresh);
             this.panel_up.Controls.Add(this.button_adauga);
             this.panel_up.Controls.Add(this.button_modifica);
@@ -167,7 +167,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(481, 63);
+            this.button1.Location = new System.Drawing.Point(481, 54);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 33;
@@ -177,7 +177,7 @@
             // 
             // numericUpDown_id
             // 
-            this.numericUpDown_id.Location = new System.Drawing.Point(311, 65);
+            this.numericUpDown_id.Location = new System.Drawing.Point(311, 56);
             this.numericUpDown_id.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -202,7 +202,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(128, 60);
+            this.label2.Location = new System.Drawing.Point(128, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 28);
             this.label2.TabIndex = 30;
@@ -220,7 +220,7 @@
             "Telefon",
             "Dana nastere",
             "Data angajare"});
-            this.comboBox1.Location = new System.Drawing.Point(310, 13);
+            this.comboBox1.Location = new System.Drawing.Point(310, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 31;
@@ -230,7 +230,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(128, 9);
+            this.label1.Location = new System.Drawing.Point(128, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 28);
             this.label1.TabIndex = 29;
@@ -241,7 +241,7 @@
             this.pictureBox1.Image = global::PetShop.Properties.Resources.download;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
