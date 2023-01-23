@@ -25,10 +25,10 @@ namespace PetShop.Forms.Animale
             var user = dbContext.Users.FirstOrDefault(x => x.Power >= 1);
             if (user == null)
             {
-                button_modifica.Visible = false;
-                button_refresh.Visible = false;
-                button_stergere.Visible = false;
-                button_adauga.Visible = false;
+                button_modifica.Enabled = false;
+                button_refresh.Enabled = false;
+                button_stergere.Enabled = false;
+                button_adauga.Enabled = false;
 
             }
             comboBox_ID.SelectedIndex= 0;
