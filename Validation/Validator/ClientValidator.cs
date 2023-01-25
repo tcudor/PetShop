@@ -18,7 +18,7 @@ namespace PetShop.Validator
                 {
                     context.AddFailure("Numele trebuie sa contina minim 2 caractere");
                 }
-                if (!list.All(char.IsLetter))
+                if (!(list.All(char.IsLetter) || list.Any(char.IsWhiteSpace)))
                 {
                     context.AddFailure("Numele trebuie sa contine doar litere");
                 }
@@ -29,7 +29,7 @@ namespace PetShop.Validator
                 {
                     context.AddFailure("Prenumele trebuie sa contina minim 2 caractere");
                 }
-                if (!list.All(char.IsLetter))
+                if (!(list.All(char.IsLetter) || list.Any(char.IsWhiteSpace)))
                 {
                     context.AddFailure("Prenumele trebuie sa contine doar litere");
                 }

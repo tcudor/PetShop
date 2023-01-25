@@ -19,7 +19,7 @@ namespace PetShop.Validator
                 {
                     context.AddFailure("Rasa trebuie sa contina minim 2 caractere");
                 }
-                if (!list.All(char.IsLetter))
+                if (!(list.All(char.IsLetter)|| list.Any(char.IsWhiteSpace)))
                 {
                     context.AddFailure("Rasa trebuie sa contina doar litere");
                 }
