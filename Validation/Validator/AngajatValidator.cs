@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace PetShop.Validator
 {
-    public class ClientValidator : AbstractValidator<Client>
+    public class AngajatValidator : AbstractValidator<Angajat>
     {
-        public ClientValidator()
+        public AngajatValidator()
         {
             RuleFor(x => x.Nume).Cascade(CascadeMode.Stop).Custom((list, context) =>
             {
@@ -18,7 +18,7 @@ namespace PetShop.Validator
                 {
                     context.AddFailure("Numele trebuie sa contina minim 2 caractere");
                 }
-                if (list.All(char.IsLetter))
+                if (!list.All(char.IsLetter))
                 {
                     context.AddFailure("Numele trebuie sa contine doar litere");
                 }
@@ -29,7 +29,7 @@ namespace PetShop.Validator
                 {
                     context.AddFailure("Prenumele trebuie sa contina minim 2 caractere");
                 }
-                if (list.All(char.IsLetter))
+                if (!list.All(char.IsLetter))
                 {
                     context.AddFailure("Prenumele trebuie sa contine doar litere");
                 }
@@ -39,10 +39,6 @@ namespace PetShop.Validator
                 if (list.Length < 10)
                 {
                     context.AddFailure("Adresa trebuie sa contina minim 10 caractere");
-                }
-                if (list.Any(char.IsDigit))
-                {
-                    context.AddFailure("Adresa nu trebuie sa contina cifre");
                 }
             });
             RuleFor(x => x.Telefon).Cascade(CascadeMode.Stop).Custom((list, context) =>
@@ -57,7 +53,7 @@ namespace PetShop.Validator
                 }
             });
             RuleFor(x => x.Email).EmailAddress().WithMessage("Introduceti o adresa de email valida");
-            RuleFor(x => x.Sex).NotEmpty().WithMessage("Nu ati selectat sexul"); ;
+            RuleFor(x => x.Sex).NotEmpty().WithMessage("Nu ati selectat sexul"); 
         }
     }
 }

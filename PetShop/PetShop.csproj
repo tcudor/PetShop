@@ -27,6 +27,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Validation\ClassLibrary.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Compile Update="Forms\Angajati\Modificare.cs" />
 		<Compile Update="Forms\ClientiForm.cs">
 			<SubType>Form</SubType>

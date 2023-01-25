@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "Validation\ClassLibrary.csproj", "{8C8C7126-272C-4DE9-9ED6-0D7F6EF76B44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{D7B8DBA0-3426-4F97-823E-2837D4A5FBA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7B8DBA0-3426-4F97-823E-2837D4A5FBA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7B8DBA0-3426-4F97-823E-2837D4A5FBA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C8C7126-272C-4DE9-9ED6-0D7F6EF76B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C8C7126-272C-4DE9-9ED6-0D7F6EF76B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C8C7126-272C-4DE9-9ED6-0D7F6EF76B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C8C7126-272C-4DE9-9ED6-0D7F6EF76B44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
